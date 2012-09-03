@@ -4,7 +4,7 @@
   <title><![CDATA[Category: intel | 心静茹水]]></title>
   <link href="http://proudxu.github.com/blog/categories/intel/atom.xml" rel="self"/>
   <link href="http://proudxu.github.com/"/>
-  <updated>2012-09-03T10:11:51+08:00</updated>
+  <updated>2012-09-03T10:14:28+08:00</updated>
   <id>http://proudxu.github.com/</id>
   <author>
     <name><![CDATA[Zhao, Xuhai]]></name>
@@ -24,14 +24,12 @@
 
 <p>问题总结如下：</p>
 
-<blockquote><p>ssh的时候提示22 <strong>bad file number</strong>
-主要原因是公司的网络问题，可能因为代理或者设置了防火墙的原因，换成外网就没问题了；
-public key问题： 按照github->admin->ssh key中的说明就可以了；
-中文编码问题：将post出的日志编码转换为utf-8 without BOM格式，再保存；</p>
+<blockquote><p>ssh的时候提示22 <strong>bad file number</strong> <br/>
+主要原因是公司的网络问题，可能因为代理或者设置了防火墙的原因，换成外网就没问题了； <br/>
+public key问题： 按照github->admin->ssh key中的说明就可以了； <br/>
+中文编码问题：将post出的日志编码转换为utf-8 without BOM格式，再保存；</p></blockquote>
 
-<hr />
-
-<p>下一步研究下代码插入，高亮和comment问题。</p></blockquote>
+<p><em>下一步研究下代码插入，高亮和comment问题。</em></p>
 ]]></content>
   </entry>
   
