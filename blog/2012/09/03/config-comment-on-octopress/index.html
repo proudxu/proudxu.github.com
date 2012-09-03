@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>hello - 心静茹水</title>
+  <title>给octopress添加Disqus评论功能 - 心静茹水</title>
   <meta name="author" content="Zhao, Xuhai">
 
   
-  <meta name="description" content="中文中文 ">
+  <meta name="description" content="经过了几天的折腾，昨天终于把octopress博客建立好了。更新起来很方便，只需要编写类似Latex语言的markdown文件，然后rake generate, rake deploy就可以啦。 今天加入了评论功能，这里主要记录下添加评论的过程。 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://proudxu.github.com/blog/2012/09/02/hello/">
+  <link rel="canonical" href="http://proudxu.github.com/blog/2012/09/03/config-comment-on-octopress/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -67,7 +67,7 @@
   
   <header>
     
-      <h1 class="entry-title">Hello</h1>
+      <h1 class="entry-title">给octopress添加Disqus评论功能</h1>
     
     
       <p class="meta">
@@ -83,7 +83,7 @@
   
 
 
-<time datetime="2012-09-02T23:10:00+08:00" pubdate data-updated="true">Sep 2<span>nd</span>, 2012</time>
+<time datetime="2012-09-03T19:16:00+08:00" pubdate data-updated="true">Sep 3<span>rd</span>, 2012</time>
         
          | <a href="#disqus_thread">Comments</a>
         
@@ -92,9 +92,17 @@
   </header>
 
 
-<div class="entry-content"><p>中文中文</p>
+<div class="entry-content"><p>经过了几天的折腾，昨天终于把octopress博客建立好了。更新起来很方便，只需要编写类似Latex语言的markdown文件，然后<code>rake generate</code>, <code>rake deploy</code>就可以啦。</p>
 
-<script src="https://gist.github.com/3600541.js?file=gistfile1.cpp"></script>
+<p>今天加入了评论功能，这里主要记录下添加评论的过程。Octopress中其实已经集成了Disqus评论插件，只需要简单设置一下就可以。</p>
+
+<ol>
+<li><strong>登录<a href="http://disqus.com">Disqus网站</a></strong>, 然后注册用户名密码，邮箱验证。</li>
+<li>单击<em>Get this on your site</em>按钮
+<img src="/images/add_comment1.PNG" alt="Get this on your site" /></li>
+<li><strong>填写网站的信息</strong>
+<img src="/images/add_comment2.PNG" alt="Get this on your site" /></li>
+</ol>
 
 </div>
 
@@ -118,15 +126,21 @@
   
 
 
-<time datetime="2012-09-02T23:10:00+08:00" pubdate data-updated="true">Sep 2<span>nd</span>, 2012</time>
+<time datetime="2012-09-03T19:16:00+08:00" pubdate data-updated="true">Sep 3<span>rd</span>, 2012</time>
       
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/octopress/'>octopress</a>
+  
+</span>
 
 
     </p>
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://proudxu.github.com/blog/2012/09/02/hello/" data-via="" data-counturl="http://proudxu.github.com/blog/2012/09/02/hello/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://proudxu.github.com/blog/2012/09/03/config-comment-on-octopress/" data-via="" data-counturl="http://proudxu.github.com/blog/2012/09/03/config-comment-on-octopress/" >Tweet</a>
   
   
   
@@ -135,10 +149,8 @@
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2012/09/02/first-note/" title="Previous Post: first note">&laquo; first note</a>
+        <a class="basic-alignment left" href="/blog/2012/09/03/test-comment/" title="Previous Post: test comment">&laquo; test comment</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2012/09/03/work-in-intel/" title="Next Post: work in intel">work in intel &raquo;</a>
       
     </p>
   </footer>
@@ -205,8 +217,8 @@
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://proudxu.github.com/blog/2012/09/02/hello/';
-        var disqus_url = 'http://proudxu.github.com/blog/2012/09/02/hello/';
+        var disqus_identifier = 'http://proudxu.github.com/blog/2012/09/03/config-comment-on-octopress/';
+        var disqus_url = 'http://proudxu.github.com/blog/2012/09/03/config-comment-on-octopress/';
         var disqus_script = 'embed.js';
       
     (function () {
