@@ -4,7 +4,7 @@
   <title><![CDATA[心静茹水]]></title>
   <link href="http://proudxu.github.com/atom.xml" rel="self"/>
   <link href="http://proudxu.github.com/"/>
-  <updated>2012-09-03T09:51:16+08:00</updated>
+  <updated>2012-09-03T09:53:18+08:00</updated>
   <id>http://proudxu.github.com/</id>
   <author>
     <name><![CDATA[Zhao, Xuhai]]></name>
@@ -14,11 +14,19 @@
 
   
   <entry>
-    <title type="html"><![CDATA[work in intel]]></title>
+    <title type="html"><![CDATA[Work In Intel]]></title>
     <link href="http://proudxu.github.com/blog/2012/09/03/work-in-intel/"/>
-    <updated>2012-09-03T09:50:00+08:00</updated>
+    <updated>2012-09-03T00:00:00+08:00</updated>
     <id>http://proudxu.github.com/blog/2012/09/03/work-in-intel</id>
-    <content type="html"><![CDATA[
+    <content type="html"><![CDATA[<p>﻿&#8212;
+layout: post
+title: &#8220;work in intel&#8221;
+date: 2012-09-03 09:50
+comments: true</p>
+
+<h2>categories: intel</h2>
+
+<p>我在因特尔</p>
 ]]></content>
   </entry>
   
