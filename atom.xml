@@ -4,7 +4,7 @@
   <title><![CDATA[心静茹水]]></title>
   <link href="http://proudxu.github.com/atom.xml" rel="self"/>
   <link href="http://proudxu.github.com/"/>
-  <updated>2012-09-03T09:55:02+08:00</updated>
+  <updated>2012-09-03T09:59:05+08:00</updated>
   <id>http://proudxu.github.com/</id>
   <author>
     <name><![CDATA[Zhao, Xuhai]]></name>
@@ -18,7 +18,13 @@
     <link href="http://proudxu.github.com/blog/2012/09/03/work-in-intel/"/>
     <updated>2012-09-03T09:50:00+08:00</updated>
     <id>http://proudxu.github.com/blog/2012/09/03/work-in-intel</id>
-    <content type="html"><![CDATA[<p>我在因特尔</p>
+    <content type="html"><![CDATA[<p>好费劲啊，终于整好了。
+问题总结如下：
+ssh的时候提示22 [bad file number]
+主要原因是公司的网络问题，可能因为代理或者设置了防火墙的原因，换成外网就没问题了；
+·public key·问题： 按照github->admin->ssh key中的说明就可以了；
+中文编码问题：将post出的日志编码转换为utf-8 without BOM格式，再保存；
+下一步研究下代码插入，高亮和comment问题。</p>
 ]]></content>
   </entry>
   
