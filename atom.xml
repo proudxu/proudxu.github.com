@@ -4,7 +4,7 @@
   <title><![CDATA[心静茹水]]></title>
   <link href="http://proudxu.github.com/atom.xml" rel="self"/>
   <link href="http://proudxu.github.com/"/>
-  <updated>2012-09-02T23:21:24+08:00</updated>
+  <updated>2012-09-03T08:59:08+08:00</updated>
   <id>http://proudxu.github.com/</id>
   <author>
     <name><![CDATA[Zhao, Xuhai]]></name>
@@ -12,6 +12,23 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Test In Intel]]></title>
+    <link href="http://proudxu.github.com/blog/2012/09/03/test-in-intel/"/>
+    <updated>2012-09-03T00:00:00+08:00</updated>
+    <id>http://proudxu.github.com/blog/2012/09/03/test-in-intel</id>
+    <content type="html"><![CDATA[<p>﻿&#8212;
+layout: post
+title: &#8220;test in intel&#8221;
+date: 2012-09-03 08:54
+comments: true</p>
+
+<h2>categories: intel</h2>
+
+<p>我在英特尔</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[hello]]></title>
