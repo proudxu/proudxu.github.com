@@ -4,7 +4,7 @@
   <title><![CDATA[心静茹水]]></title>
   <link href="http://proudxu.github.com/atom.xml" rel="self"/>
   <link href="http://proudxu.github.com/"/>
-  <updated>2012-09-03T09:59:05+08:00</updated>
+  <updated>2012-09-03T10:05:05+08:00</updated>
   <id>http://proudxu.github.com/</id>
   <author>
     <name><![CDATA[Zhao, Xuhai]]></name>
@@ -12,6 +12,15 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[fdfdfd]]></title>
+    <link href="http://proudxu.github.com/blog/2012/09/03/fdfdfd/"/>
+    <updated>2012-09-03T10:01:00+08:00</updated>
+    <id>http://proudxu.github.com/blog/2012/09/03/fdfdfd</id>
+    <content type="html"><![CDATA[
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[work in intel]]></title>
@@ -34,6 +43,9 @@ ssh的时候提示22 [bad file number]
     <updated>2012-09-02T23:10:00+08:00</updated>
     <id>http://proudxu.github.com/blog/2012/09/02/hello</id>
     <content type="html"><![CDATA[<p>中文中文</p>
+
+<script src="https://gist.github.com/3600541.js?file=gistfile1.cpp"></script>
+
 ]]></content>
   </entry>
   
