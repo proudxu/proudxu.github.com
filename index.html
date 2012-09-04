@@ -99,58 +99,40 @@
 
 <p>今天加入了评论功能，这里主要记录下添加评论的过程。Octopress中其实已经集成了Disqus评论插件，只需要简单设置一下就可以。</p>
 
-<ol>
+<ul>
 <li><p><strong>登录<a href="http://disqus.com">Disqus网站</a></strong>, 然后注册用户名密码，邮箱验证。</p></li>
 <li><p>单击<em>Get this on your site</em>按钮</p></li>
-</ol>
+</ul>
 
 
-<p><img src="/images/add_comment1.PNG" alt="Get this on your site" /></p>
+<center>
+<img src="/images/add_comment1.PNG" >
+</center>
 
-<ol>
+
+<ul>
 <li><strong>填写网站的信息</strong></li>
-</ol>
+</ul>
 
 
-<p><img src="/images/add_comment2.PNG" alt="Get this on your site" /></p>
-</div>
-  
-  
+<center>
+<img src="/images/add_comment2.PNG">
+</center>
 
 
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/09/03/test-comment/">Test Comment</a></h1>
-    
-    
-      <p class="meta">
-        
+<ul>
+<li>修改_config.yml文件:</li>
+</ul>
 
 
+<pre><code>#Disqus Comments
+disqus_short_name: Site Shortname
+disqus_show_comment_count: true</code></pre>
 
 
+<p>之后就可以通过<code>rake new_post['title']</code>创建日志，日志中设定：</p>
 
-
-
-
-  
-
-
-<time datetime="2012-09-03T18:31:00+08:00" pubdate data-updated="true">Sep 3<span>rd</span>, 2012</time>
-        
-         | <a href="/blog/2012/09/03/test-comment/#disqus_thread">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><pre><code>test if comment is working.
+<pre><code>comment: true
 </code></pre>
 </div>
   
@@ -384,10 +366,6 @@ public key问题： 按照github-&gt;admin-&gt;ssh key中的说明就可以了�
       </li>
     
       <li class="post">
-        <a href="/blog/2012/09/03/test-comment/">test comment</a>
-      </li>
-    
-      <li class="post">
         <a href="/blog/2012/09/03/blogging-like-a-hacker/">Blogging Like a Hacker</a>
       </li>
     
@@ -397,6 +375,10 @@ public key问题： 按照github-&gt;admin-&gt;ssh key中的说明就可以了�
     
       <li class="post">
         <a href="/blog/2012/09/02/hello/">hello</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/09/02/first-note/">first note</a>
       </li>
     
   </ul>
