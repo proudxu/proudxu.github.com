@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: reprinted | 心静茹水]]></title>
-  <link href="http://proudxu.github.com/blog/categories/reprinted/atom.xml" rel="self"/>
+  <title><![CDATA[Category: 转载 | 心静茹水]]></title>
+  <link href="http://proudxu.github.com/blog/categories/%E8%BD%AC%E8%BD%BD/atom.xml" rel="self"/>
   <link href="http://proudxu.github.com/"/>
-  <updated>2012-09-05T17:28:14+08:00</updated>
+  <updated>2012-09-05T18:38:21+08:00</updated>
   <id>http://proudxu.github.com/</id>
   <author>
     <name><![CDATA[Zhao, Xuhai]]></name>
@@ -20,7 +20,7 @@
     <id>http://proudxu.github.com/blog/2012/09/03/blogging-like-a-hacker</id>
     <content type="html"><![CDATA[<p><strong>转载自<a href="http://tom.preston-werner.com/2008/11/17/blogging-like-a-hacker.html">Blogging like a hacker</a></strong></p>
 
-<p>h1. Category: reprinted</p>
+<p>h1. Category: 转载</p>
 
 <p>p(meta). 17 Nov 2008 - San Francisco</p>
 
