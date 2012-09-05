@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: octopress | 心静茹水]]></title>
-  <link href="http://proudxu.github.com/blog/categories/octopress/atom.xml" rel="self"/>
+  <title><![CDATA[Tag: 中文支持 | 心静茹水]]></title>
+  <link href="http://proudxu.github.com/tags/中文支持/atom.xml" rel="self"/>
   <link href="http://proudxu.github.com/"/>
   <updated>2012-09-05T19:48:20+08:00</updated>
   <id>http://proudxu.github.com/</id>
@@ -55,74 +55,6 @@
 <h2>关于使category，和tag支持中文##，由于我没有用Log4D修改之后的插件，所以出现了category和tag不支持中文的情况，这个的修改参考了<a href="http://pfmiles.github.com/blog/liquid-error-about-regexp-match-when-using-octopress-tagcloud/">pf_miles</a>的日志，说的挺好的，不过对于像我这样两个tag插件都用官方原版的来说，就不能直接复制里面的代码了，否则会出现tag和category相混淆的情况。但他的思想还是可以学的嘛，提炼出来，就是把<code>plugins</code>目录下的<code>tag_cloud.rb</code>、<code>tag_generator.rb</code>、<code>catetory_generator.rb</code>这几个文件的#正则表达式#部分都加上\u，就可以了。</h2>
 
 <p>思路可能有点乱，这是我凭借记忆写出来的，有可能有些出入，如果有什么不明白的，可以评论，我会及时回复的。</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[给octopress添加Disqus评论功能]]></title>
-    <link href="http://proudxu.github.com/blog/2012/09/03/config-comment-on-octopress/"/>
-    <updated>2012-09-03T19:16:00+08:00</updated>
-    <id>http://proudxu.github.com/blog/2012/09/03/config-comment-on-octopress</id>
-    <content type="html"><![CDATA[<p>经过了几天的折腾，昨天终于把octopress博客建立好了。更新起来很方便，只需要编写类似Latex语言的markdown文件，然后<code>rake generate</code>, <code>rake deploy</code>就可以啦。</p>
-
-<p>今天加入了评论功能，这里主要记录下添加评论的过程。Octopress中其实已经集成了Disqus评论插件，只需要简单设置一下就可以。</p>
-
-<ul>
-<li><p><strong>登录<a href="http://disqus.com">Disqus网站</a></strong>, 然后注册用户名密码，邮箱验证。</p></li>
-<li><p>单击<em>Get this on your site</em>按钮</p></li>
-</ul>
-
-
-<center>
-<img src="http://proudxu.github.com/images/add_comment1.PNG" >
-</center>
-
-
-<ul>
-<li><strong>填写网站的信息</strong></li>
-</ul>
-
-
-<center>
-<img src="http://proudxu.github.com/images/add_comment2.PNG">
-</center>
-
-
-<ul>
-<li>修改_config.yml文件:</li>
-</ul>
-
-
-<pre><code>#Disqus Comments
-disqus_short_name: Site Shortname
-disqus_show_comment_count: true</code></pre>
-
-
-<p>之后就可以通过<code>rake new_post['title']</code>创建日志，日志中设定：</p>
-
-<pre><code>comment: true
-</code></pre>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[work in intel]]></title>
-    <link href="http://proudxu.github.com/blog/2012/09/03/work-in-intel/"/>
-    <updated>2012-09-03T09:50:00+08:00</updated>
-    <id>http://proudxu.github.com/blog/2012/09/03/work-in-intel</id>
-    <content type="html"><![CDATA[<p>好费劲啊，octopress博客终于整好了。<br></p>
-
-<h2>我会慢慢的从网易博客<em><a href="http://blog.163.com/lovejingru@yeah/">永远的海哥</a></em>迁移到这里。</h2>
-
-<p>问题总结如下：</p>
-
-<pre><code>ssh的时候提示22 **bad file number**   
-主要原因是公司的网络问题，可能因为代理或者设置了防火墙的原因，换成外网就没问题了；   
-public key问题： 按照github-&gt;admin-&gt;ssh key中的说明就可以了；   
-中文编码问题：将post出的日志编码转换为utf-8 without BOM格式，再保存；   
-</code></pre>
-
-<p><strong>下一步研究下代码插入，高亮和comment问题。</strong></p>
 ]]></content>
   </entry>
   
