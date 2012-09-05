@@ -4,7 +4,7 @@
   <title><![CDATA[Tag: octopress | 心静茹水]]></title>
   <link href="http://proudxu.github.com/tags/octopress/atom.xml" rel="self"/>
   <link href="http://proudxu.github.com/"/>
-  <updated>2012-09-05T19:48:20+08:00</updated>
+  <updated>2012-09-05T19:50:57+08:00</updated>
   <id>http://proudxu.github.com/</id>
   <author>
     <name><![CDATA[Zhao, Xuhai]]></name>
@@ -22,7 +22,7 @@
 整个白天都在折腾我的Octopress博客，这个果然很需要耐心，还好我最近已经被java的各种bug折磨的宠辱不惊了。今天主要添加了tag功能。正如<a href="http://log4d.com/2012/05/tag-cloud/">Log4D</a>所说的那样，一篇文章只能输入一个category，但可以有多个tag，我很同意这个观点。我这里也是用了他所用的两个插件<a href="https://github.com/robbyedwards/octopress-tag-pages">robbyedwards/octopress-tag-pages</a>和<a href="https://github.com/robbyedwards/octopress-tag-cloud">robbyedwards/octopress-tag-cloud</a>,不过跟他不同的是，我只用了官方网站上提供的两个插件，因为我觉得category还是排列整齐点的好，毕竟一个博客的category不会很多，没有必要弄成tag那种有大有小的样式，所以category我还沿用了Octopress官方的样式。这两个插件安装起来不太难，不过有些细节需要注意的。  <br/>
 第一个插件的功能是使文章支持<code>tag</code>，第二个是集中显示<code>tag cloud</code>。</p>
 
-<h2>关于第一个插件的安装##，我是把官网上提供的文件都复制到了相应的目录，这样在Archives中就能看到tag的信息，<a href="https://github.com/robbyedwards/octopress-tag-pages">robbyedwards/octopress-tag-pages</a>中提到的<code>Usage</code>,上面的我没有用到，只是往<code>config.yml</code>中添加了</h2>
+<p><strong>关于第一个插件的安装</strong>，我是把官网上提供的文件都复制到了相应的目录，这样在Archives中就能看到tag的信息，<a href="https://github.com/robbyedwards/octopress-tag-pages">robbyedwards/octopress-tag-pages</a>中提到的<code>Usage</code>,上面的我没有用到，只是往<code>config.yml</code>中添加了</p>
 
 <pre><code>tag_dir: tags    
 </code></pre>
@@ -38,9 +38,8 @@
 <pre><code>tags: [tag1, tag2, ...]
 </code></pre>
 
-<p>为了使每次新post出的日志都能自动附带tags: 标签，可以修改<code>config.rb</code>文件，在110行左右添加<code>post.puts "tags: "</code>。</p>
-
-<h2>第二个插件的安装##，复制相应文件到对应的目录，然后到<code>source\_includes\custom\navigation.html</code>中添加一个tag cloud页面的链接，指向刚刚添加的tags.html文件。对了，还得修改下样式，到<code>sass/custom/_styles.scss</code>中添加如下css样式：</h2>
+<p>为了使每次新post出的日志都能自动附带tags: 标签，可以修改<code>config.rb</code>文件，在110行左右添加<code>post.puts "tags: "</code>。  <br/>
+<strong>第二个插件的安装</strong>，复制相应文件到对应的目录，然后到<code>source\_includes\custom\navigation.html</code>中添加一个tag cloud页面的链接，指向刚刚添加的tags.html文件。对了，还得修改下样式，到<code>sass/custom/_styles.scss</code>中添加如下css样式：</p>
 
 <pre><code>#content article .cloud li{
   display: inline;
