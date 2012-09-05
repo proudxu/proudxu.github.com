@@ -4,7 +4,7 @@
   <title><![CDATA[Tag: octopress | 心静茹水]]></title>
   <link href="http://proudxu.github.com/tags/octopress/atom.xml" rel="self"/>
   <link href="http://proudxu.github.com/"/>
-  <updated>2012-09-05T19:50:57+08:00</updated>
+  <updated>2012-09-05T19:52:19+08:00</updated>
   <id>http://proudxu.github.com/</id>
   <author>
     <name><![CDATA[Zhao, Xuhai]]></name>
@@ -49,11 +49,9 @@
 
 
 <p>  <br/>
-之后把tags.html中的样式换成cloud即可。</p>
-
-<h2>关于使category，和tag支持中文##，由于我没有用Log4D修改之后的插件，所以出现了category和tag不支持中文的情况，这个的修改参考了<a href="http://pfmiles.github.com/blog/liquid-error-about-regexp-match-when-using-octopress-tagcloud/">pf_miles</a>的日志，说的挺好的，不过对于像我这样两个tag插件都用官方原版的来说，就不能直接复制里面的代码了，否则会出现tag和category相混淆的情况。但他的思想还是可以学的嘛，提炼出来，就是把<code>plugins</code>目录下的<code>tag_cloud.rb</code>、<code>tag_generator.rb</code>、<code>catetory_generator.rb</code>这几个文件的#正则表达式#部分都加上\u，就可以了。</h2>
-
-<p>思路可能有点乱，这是我凭借记忆写出来的，有可能有些出入，如果有什么不明白的，可以评论，我会及时回复的。</p>
+之后把tags.html中的样式换成cloud即可。  <br/>
+<strong>关于使category，和tag支持中文</strong>，由于我没有用Log4D修改之后的插件，所以出现了category和tag不支持中文的情况，这个的修改参考了<a href="http://pfmiles.github.com/blog/liquid-error-about-regexp-match-when-using-octopress-tagcloud/">pf_miles</a>的日志，说的挺好的，不过对于像我这样两个tag插件都用官方原版的来说，就不能直接复制里面的代码了，否则会出现tag和category相混淆的情况。但他的思想还是可以学的嘛，提炼出来，就是把<code>plugins</code>目录下的<code>tag_cloud.rb</code>、<code>tag_generator.rb</code>、<code>catetory_generator.rb</code>这几个文件的#正则表达式#部分都加上\u，就可以了。  <br/>
+思路可能有点乱，这是我凭借记忆写出来的，有可能有些出入，如果有什么不明白的，可以评论，我会及时回复的。</p>
 ]]></content>
   </entry>
   
