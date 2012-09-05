@@ -4,7 +4,7 @@
   <title><![CDATA[心静茹水]]></title>
   <link href="http://proudxu.github.com/atom.xml" rel="self"/>
   <link href="http://proudxu.github.com/"/>
-  <updated>2012-09-05T18:53:59+08:00</updated>
+  <updated>2012-09-05T19:01:12+08:00</updated>
   <id>http://proudxu.github.com/</id>
   <author>
     <name><![CDATA[Zhao, Xuhai]]></name>
@@ -12,6 +12,15 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[new log]]></title>
+    <link href="http://proudxu.github.com/blog/2012/09/05/new-log/"/>
+    <updated>2012-09-05T18:59:00+08:00</updated>
+    <id>http://proudxu.github.com/blog/2012/09/05/new-log</id>
+    <content type="html"><![CDATA[<p>正文：中文。</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[给octopress添加Disqus评论功能]]></title>
