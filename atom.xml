@@ -4,7 +4,7 @@
   <title><![CDATA[心静茹水]]></title>
   <link href="http://proudxu.github.com/atom.xml" rel="self"/>
   <link href="http://proudxu.github.com/"/>
-  <updated>2012-09-04T08:32:21+08:00</updated>
+  <updated>2012-09-05T16:20:56+08:00</updated>
   <id>http://proudxu.github.com/</id>
   <author>
     <name><![CDATA[Zhao, Xuhai]]></name>
@@ -132,7 +132,7 @@ public key问题： 按照github-&gt;admin-&gt;ssh key中的说明就可以了�
     <link href="http://proudxu.github.com/blog/2012/09/02/hello/"/>
     <updated>2012-09-02T23:10:00+08:00</updated>
     <id>http://proudxu.github.com/blog/2012/09/02/hello</id>
-    <content type="html"><![CDATA[<p>中文中文</p>
+    <content type="html"><![CDATA[<p>冒泡排序</p>
 
 <script src="https://gist.github.com/3600541.js?file=gistfile1.cpp"></script>
 

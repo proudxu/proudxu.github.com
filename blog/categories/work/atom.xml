@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: java | 心静茹水]]></title>
-  <link href="http://proudxu.github.com/blog/categories/java/atom.xml" rel="self"/>
+  <title><![CDATA[Category: work | 心静茹水]]></title>
+  <link href="http://proudxu.github.com/blog/categories/work/atom.xml" rel="self"/>
   <link href="http://proudxu.github.com/"/>
-  <updated>2012-09-04T08:32:21+08:00</updated>
+  <updated>2012-09-05T16:20:56+08:00</updated>
   <id>http://proudxu.github.com/</id>
   <author>
     <name><![CDATA[Zhao, Xuhai]]></name>
