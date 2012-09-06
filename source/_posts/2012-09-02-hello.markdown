@@ -1,0 +1,10 @@
+---
+layout: post
+title: "hello"
+date: 2012-09-02 23:10
+comments: true
+categories: 算法
+tags: [排序]
+---
+冒泡排序
+<script src="https://gist.github.com/3600541.js?file=gistfile1.cpp"></script>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: 算法 | 心静茹水]]></title>
+  <link href="http://proudxu.github.com/blog/categories/算法/atom.xml" rel="self"/>
+  <link href="http://proudxu.github.com/"/>
+  <updated>2012-09-06T09:31:02+08:00</updated>
+  <id>http://proudxu.github.com/</id>
+  <author>
+    <name><![CDATA[Zhao, Xuhai]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[hello]]></title>
+    <link href="http://proudxu.github.com/blog/2012/09/02/hello/"/>
+    <updated>2012-09-02T23:10:00+08:00</updated>
+    <id>http://proudxu.github.com/blog/2012/09/02/hello</id>
+    <content type="html"><![CDATA[<p>冒泡排序</p>
+
+<script src="https://gist.github.com/3600541.js?file=gistfile1.cpp"></script>
+
+]]></content>
+  </entry>
+  
+</feed>

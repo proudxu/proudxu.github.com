@@ -102,18 +102,38 @@ module Jekyll
     end
 
     # Loops through the list of category pages and processes each one.
+    #def write_category_indexes
+#  if self.layouts.key? 'category_index'
+#   dir = self.config['category_dir'] || 'categories'
+#  self.categories.keys.each do |category|
+#   self.write_category_index(File.join(dir, category.gsub(/_|\P{Word}/, '-').gsub(/-{2,}/, '-').downcase), category)
+#end
+#
+#     # Throw an exception if the layout couldn't be found.
+#    else
+#     throw "No 'category_index' layout found."
+#  end
+#end
+	
+	
     def write_category_indexes
       if self.layouts.key? 'category_index'
         dir = self.config['category_dir'] || 'categories'
         self.categories.keys.each do |category|
-          self.write_category_index(File.join(dir, category.gsub(/_|\P{Word}/, '-').gsub(/-{2,}/, '-').downcase), category)
+          cate_dir =  category.gsub(/_|\P{Word}/u, '-').gsub(/-{2,}/u, '-').downcase
+#cate_dir = URI::escape(cate_dir)
+#cate_dir = URI::parse(cate_dir)
+          cate_dir = cate_dir.to_s
+          self.write_category_index(File.join(dir, cate_dir), category)
         end
 
-      # Throw an exception if the layout couldn't be found.
+        # Throw an exception if the layout couldn't be found.
       else
         throw "No 'category_index' layout found."
       end
     end
+	
+	
 
   end
 
@@ -143,7 +163,7 @@ module Jekyll
     def category_links(categories)
       dir = @context.registers[:site].config['category_dir']
       categories = categories.sort!.map do |item|
-        "<a class='category' href='/#{dir}/#{item.gsub(/_|\P{Word}/, '-').gsub(/-{2,}/, '-').downcase}/'>#{item}</a>"
+        "<a class='category' href='/#{dir}/#{item.gsub(/_|\P{Word}/u, '-').gsub(/-{2,}/u, '-').downcase}/'>#{item}</a>"
       end
 
       case categories.length
