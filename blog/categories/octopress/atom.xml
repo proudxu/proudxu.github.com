@@ -4,7 +4,7 @@
   <title><![CDATA[Category: octopress | 心静茹水]]></title>
   <link href="http://proudxu.github.com/blog/categories/octopress/atom.xml" rel="self"/>
   <link href="http://proudxu.github.com/"/>
-  <updated>2012-09-06T17:55:51+08:00</updated>
+  <updated>2012-09-06T18:06:13+08:00</updated>
   <id>http://proudxu.github.com/</id>
   <author>
     <name><![CDATA[Zhao, Xuhai]]></name>
@@ -21,9 +21,15 @@
     <content type="html"><![CDATA[<p>唉，今天又没干别的，调试了一整天的Octopress，老板我对不起你。。。 <br/>
 今天向我的博客添加了About Me页面和相册页面，这里主要说说相册功能是如何添加的。  <br/>
 对于Octopress这种轻量级的静态博客，没有必要将相册功能做的很完善，神马添加相册，上传照片功能啥的都本地手动添加就行了，这里的相册主要就是展示一下照片，而且在简洁素雅的前提下最好有一些酷酷的效果，这就是我的追求。  <br/>
-下午一直在找JS和Jquery的相册，试验了几个效果比较炫的，相册自带的css总是会和Octopress的css相冲突，导致切换到相册页面的时候整体排版就相当凌乱，在我很无助的时候，找到了这里：<a href="http://www.forceappx.com/blog/2011/12/28/getting-fancybox-to-play-nice-with-octopress/">appX</a>，这个文章主要讲的是如何将(fancyBox)[http://fancyapps.com/fancybox/#license]这个JQuery相册嵌入到Octopress日志中，给日志中的图片添加动态效果。在我试验他的方法之前，先试验了下fancyBox，效果出奇的让我满意，就是我要找的那种功能。  <br/>
-fancyBox主要用于在网页中展示相册，单击相片墙中的一个相片的时候，能够有淡入淡出的效果，且能自如的通过鼠标滚轮或者相片两侧的向上向下按钮浏览整个相册的内容。从(fancyBox)[http://fancyapps.com/fancybox/#license]下载之后运行一下Demo会有更好的理解。  <br/>
-“安装过程”大概是这样的，首先得在博客中添加一个相册的导航按钮，方法是修改</p>
+下午一直在找JS和Jquery的相册，试验了几个效果比较炫的，相册自带的css总是会和Octopress的css相冲突，导致切换到相册页面的时候整体排版就相当凌乱，在我很无助的时候，找到了这里：<a href="http://www.forceappx.com/blog/2011/12/28/getting-fancybox-to-play-nice-with-octopress/">appX</a>，这个文章主要讲的是如何将<a href="http://fancyapps.com/fancybox/#license">fancyBox</a>这个JQuery相册嵌入到Octopress日志中，给日志中的图片添加动态效果。在我试验他的方法之前，先试验了下fancyBox，效果出奇的让我满意，就是我要找的那种功能。  <br/>
+fancyBox主要用于在网页中展示相册，单击相片墙中的一个相片的时候，能够有淡入淡出的效果，且能自如的通过鼠标滚轮或者相片两侧的向上向下按钮浏览整个相册的内容。从<a href="http://fancyapps.com/fancybox/#license">fancyBox</a>下载之后运行一下Demo会有更好的理解。</p>
+
+<center>
+<img src="http://proudxu.github.com/images/support_gallery.jpg">
+</center>
+
+
+<p>“安装过程”大概是这样的，首先得在博客中添加一个相册的导航按钮，方法是修改</p>
 
 <pre><code>\source\_includes\custom\navigation.html    
 </code></pre>
