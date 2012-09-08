@@ -4,7 +4,7 @@
   <title><![CDATA[Category: web前端 | 心静茹水]]></title>
   <link href="http://proudxu.github.com/blog/categories/web前端/atom.xml" rel="self"/>
   <link href="http://proudxu.github.com/"/>
-  <updated>2012-09-08T11:53:05+08:00</updated>
+  <updated>2012-09-08T12:06:50+08:00</updated>
   <id>http://proudxu.github.com/</id>
   <author>
     <name><![CDATA[Zhao, Xuhai]]></name>
@@ -59,7 +59,7 @@
 <td align="center">            </td>
 <td align="center">      Y     </td>
 <td align="center">            </td>
-<td align="center">            |</td>
+<td align="center">            </td>
 </tr>
 <tr>
 <td></td>
@@ -69,7 +69,7 @@
 <td align="center">            </td>
 <td align="center">            </td>
 <td align="center">            </td>
-<td align="center">            |</td>
+<td align="center">            </td>
 </tr>
 <tr>
 <td></td>
@@ -79,7 +79,7 @@
 <td align="center">            </td>
 <td align="center">            </td>
 <td align="center">            </td>
-<td align="center">            |</td>
+<td align="center">            </td>
 </tr>
 <tr>
 <td></td>
@@ -89,7 +89,7 @@
 <td align="center">            </td>
 <td align="center">            </td>
 <td align="center">            </td>
-<td align="center">            |</td>
+<td align="center">            </td>
 </tr>
 <tr>
 <td></td>
@@ -99,7 +99,7 @@
 <td align="center">      Y     </td>
 <td align="center">            </td>
 <td align="center">            </td>
-<td align="center">            |</td>
+<td align="center">            </td>
 </tr>
 <tr>
 <td></td>
@@ -109,7 +109,7 @@
 <td align="center">      Y     </td>
 <td align="center">            </td>
 <td align="center">            </td>
-<td align="center">            |</td>
+<td align="center">            </td>
 </tr>
 <tr>
 <td></td>
@@ -119,11 +119,67 @@
 <td align="center">            </td>
 <td align="center">            </td>
 <td align="center">     Y      </td>
-<td align="center">     Y      |</td>
+<td align="center">     Y      </td>
 </tr>
 </tbody>
 </table>
 
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th align="left"> Left align </th>
+<th align="right"> Right align </th>
+<th align="center"> Center align </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td align="left"> This       </td>
+<td align="right">        This </td>
+<td align="center">     This     </td>
+</tr>
+<tr>
+<td></td>
+<td align="left"> column     </td>
+<td align="right">      column </td>
+<td align="center">    column    </td>
+</tr>
+<tr>
+<td></td>
+<td align="left"> will       </td>
+<td align="right">        will </td>
+<td align="center">     will     </td>
+</tr>
+<tr>
+<td></td>
+<td align="left"> be         </td>
+<td align="right">          be </td>
+<td align="center">      be      </td>
+</tr>
+<tr>
+<td></td>
+<td align="left"> left       </td>
+<td align="right">       right </td>
+<td align="center">    center    </td>
+</tr>
+<tr>
+<td></td>
+<td align="left"> aligned    </td>
+<td align="right">     aligned </td>
+<td align="center">   aligned</td>
+</tr>
+</tbody>
+</table>
+
+
+<p>Header1 | Header2 | Header 3
+--------+---------+----------
+0       | 1       | 7
+2       | 5       | 3
+9       | 7       | 2</p>
 ]]></content>
   </entry>
   
