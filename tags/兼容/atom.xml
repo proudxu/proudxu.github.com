@@ -4,7 +4,7 @@
   <title><![CDATA[Tag: 兼容 | 心静茹水]]></title>
   <link href="http://proudxu.github.com/tags/兼容/atom.xml" rel="self"/>
   <link href="http://proudxu.github.com/"/>
-  <updated>2012-09-08T13:04:31+08:00</updated>
+  <updated>2012-09-08T13:14:55+08:00</updated>
   <id>http://proudxu.github.com/</id>
   <author>
     <name><![CDATA[Zhao, Xuhai]]></name>
@@ -18,7 +18,7 @@
     <link href="http://proudxu.github.com/blog/2012/09/08/css-hack/"/>
     <updated>2012-09-08T11:14:00+08:00</updated>
     <id>http://proudxu.github.com/blog/2012/09/08/css-hack</id>
-    <content type="html"><![CDATA[<p>直接看实例吧，下面的程序转载自: <a href="http://www.cnblogs.com/superc/archive/2012/03/11/2390652.html">Superc</a></p>
+    <content type="html"><![CDATA[<p>直接看实例吧，下面的程序转载自: <a href="http://www.cnblogs.com/superc/archive/2012/03/11/2390652.html">Superc</a>和<a href="http://www.cnblogs.com/WuQiang/archive/2011/08/23/2150240.html">飘</a></p>
 
 <pre><code>"\9"　例:"margin:0px auto\9;".这里的"\9"可以区别所有IE和FireFox.
 "*"　IE6、IE7可以识别.IE8、FireFox不能.
@@ -30,12 +30,18 @@
 
 <p>还是不知道怎么区分.好吧,来看个例子:</p>
 
-<script src="https://gist.github.com/3671558.js?file=gistfile1.html"></script>
+<script src="https://gist.github.com/3672021.js?file=gistfile1.txt"></script>
 
 
 <h2>    </h2>
 
-<p>附上一张CSS Hack样式属性前缀表</p>
+<p>还有这个例子也不错：</p>
+
+<script src="https://gist.github.com/3671558.js?file=gistfile1.html"></script>
+
+
+<p>   <br/>
+附上一张CSS Hack样式属性前缀表</p>
 
 <center>
 <img src="http://proudxu.github.com/images/css_hack.jpg">
