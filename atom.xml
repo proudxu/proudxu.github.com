@@ -4,7 +4,7 @@
   <title><![CDATA[心静茹水]]></title>
   <link href="http://proudxu.github.com/atom.xml" rel="self"/>
   <link href="http://proudxu.github.com/"/>
-  <updated>2012-09-08T12:20:42+08:00</updated>
+  <updated>2012-09-08T12:24:45+08:00</updated>
   <id>http://proudxu.github.com/</id>
   <author>
     <name><![CDATA[Zhao, Xuhai]]></name>
@@ -37,150 +37,9 @@
 
 <p>附上一张CSS Hack样式属性前缀表</p>
 
-<table>
-<thead>
-<tr>
-<th></th>
-<th align="center">              </th>
-<th align="center">     IE6    </th>
-<th align="center">     IE7    </th>
-<th align="center">     IE8    </th>
-<th align="center">   Firefox  </th>
-<th align="center">   Chrome   </th>
-<th align="center">   Safari   </th>
-<th>    </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td></td>
-<td align="center">  !important  </td>
-<td align="center">            </td>
-<td align="center">      Y     </td>
-<td align="center">            </td>
-<td align="center">      Y     </td>
-<td align="center">            </td>
-<td align="center">                </td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td align="center">      _       </td>
-<td align="center">      Y     </td>
-<td align="center">            </td>
-<td align="center">            </td>
-<td align="center">            </td>
-<td align="center">            </td>
-<td align="center">                </td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td align="center">      *       </td>
-<td align="center">      Y     </td>
-<td align="center">      Y     </td>
-<td align="center">            </td>
-<td align="center">            </td>
-<td align="center">            </td>
-<td align="center">                </td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td align="center">      *+      </td>
-<td align="center">            </td>
-<td align="center">      Y     </td>
-<td align="center">            </td>
-<td align="center">            </td>
-<td align="center">            </td>
-<td align="center">                </td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td align="center">      \9      </td>
-<td align="center">      Y     </td>
-<td align="center">      Y     </td>
-<td align="center">      Y     </td>
-<td align="center">            </td>
-<td align="center">            </td>
-<td align="center">                </td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td align="center">      \0      </td>
-<td align="center">            </td>
-<td align="center">            </td>
-<td align="center">      Y     </td>
-<td align="center">            </td>
-<td align="center">            </td>
-<td align="center">                </td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td align="center">nth-of-type(1)</td>
-<td align="center">            </td>
-<td align="center">            </td>
-<td align="center">            </td>
-<td align="center">            </td>
-<td align="center">     Y      </td>
-<td align="center">     Y          </td>
-<td></td>
-</tr>
-</tbody>
-</table>
-
-
-<table>
-<thead>
-<tr>
-<th></th>
-<th align="left"> Left align </th>
-<th align="right"> Right align </th>
-<th align="center"> Center align </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td></td>
-<td align="left"> This       </td>
-<td align="right">        This </td>
-<td align="center">     This     |</td>
-</tr>
-<tr>
-<td></td>
-<td align="left"> column     </td>
-<td align="right">      column </td>
-<td align="center">    column    |</td>
-</tr>
-<tr>
-<td></td>
-<td align="left"> will       </td>
-<td align="right">        will </td>
-<td align="center">     will     |</td>
-</tr>
-<tr>
-<td></td>
-<td align="left"> be         </td>
-<td align="right">          be </td>
-<td align="center">      be      |</td>
-</tr>
-<tr>
-<td></td>
-<td align="left"> left       </td>
-<td align="right">       right </td>
-<td align="center">    center    |</td>
-</tr>
-<tr>
-<td></td>
-<td align="left"> aligned    </td>
-<td align="right">     aligned </td>
-<td align="center">   aligned    |</td>
-</tr>
-</tbody>
-</table>
+<center>
+<img src="images/css hack.jpg">
+</center>
 
 ]]></content>
   </entry>
