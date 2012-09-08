@@ -9,7 +9,10 @@
   <meta name="author" content="Zhao, Xuhai">
 
   
-  <meta name="description" content="唉，今天又没干别的，调试了一整天的Octopress，老板我对不起你。。。 今天向我的博客添加了About Me页面和相册页面，这里主要说说相册功能是如何添加的。 对于Octopress这种轻量级的静态博客，没有必要将相册功能做的很完善，神马添加相册，上传照片功能啥的都本地手动添加就行了， &hellip;">
+  <meta name="description" content="直接看实例吧，下面的程序转载自: Superc "\9"　例:"margin:0px auto\9;".这里的"\9"可以区别所有IE和FireFox.
+"*"　IE6、IE7可以识别.IE8、FireFox不能.
+"_"　IE6可以识别"_",IE7、IE8、FireFox不能.
+如此, &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -77,6 +80,187 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/09/08/css-hack/">CSS Hack: 浏览器兼容性问题</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-09-08T11:14:00+08:00" pubdate data-updated="true">Sep 8<span>th</span>, 2012</time>
+        
+         | <a href="/blog/2012/09/08/css-hack/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>直接看实例吧，下面的程序转载自: <a href="http://www.cnblogs.com/superc/archive/2012/03/11/2390652.html">Superc</a></p>
+
+<pre><code>"\9"　例:"margin:0px auto\9;".这里的"\9"可以区别所有IE和FireFox.
+"*"　IE6、IE7可以识别.IE8、FireFox不能.
+"_"　IE6可以识别"_",IE7、IE8、FireFox不能.
+如此,就可以完全区分开IE6、IE7、IE8、FireFox了.</code></pre>
+
+
+<p></p>
+
+<p>还是不知道怎么区分.好吧,来看个例子:</p>
+
+<script src="https://gist.github.com/3671558.js?file=gistfile1.html"></script>
+
+
+<h2>    </h2>
+
+<p>附上一张CSS Hack样式属性前缀表</p>
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th align="center">              </th>
+<th align="center">     IE6    </th>
+<th align="center">     IE7    </th>
+<th align="center">     IE8    </th>
+<th align="center">   Firefox  </th>
+<th align="center">   Chrome   </th>
+<th align="center">   Safari   </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td align="center">  !important  </td>
+<td align="center">            </td>
+<td align="center">      Y     </td>
+<td align="center">            </td>
+<td align="center">      Y     </td>
+<td align="center">            </td>
+<td align="center">            |</td>
+</tr>
+<tr>
+<td></td>
+<td align="center">      _       </td>
+<td align="center">      Y     </td>
+<td align="center">            </td>
+<td align="center">            </td>
+<td align="center">            </td>
+<td align="center">            </td>
+<td align="center">            |</td>
+</tr>
+<tr>
+<td></td>
+<td align="center">      *       </td>
+<td align="center">      Y     </td>
+<td align="center">      Y     </td>
+<td align="center">            </td>
+<td align="center">            </td>
+<td align="center">            </td>
+<td align="center">            |</td>
+</tr>
+<tr>
+<td></td>
+<td align="center">      *+      </td>
+<td align="center">            </td>
+<td align="center">      Y     </td>
+<td align="center">            </td>
+<td align="center">            </td>
+<td align="center">            </td>
+<td align="center">            |</td>
+</tr>
+<tr>
+<td></td>
+<td align="center">      \9      </td>
+<td align="center">      Y     </td>
+<td align="center">      Y     </td>
+<td align="center">      Y     </td>
+<td align="center">            </td>
+<td align="center">            </td>
+<td align="center">            |</td>
+</tr>
+<tr>
+<td></td>
+<td align="center">      \0      </td>
+<td align="center">            </td>
+<td align="center">            </td>
+<td align="center">      Y     </td>
+<td align="center">            </td>
+<td align="center">            </td>
+<td align="center">            |</td>
+</tr>
+<tr>
+<td></td>
+<td align="center">nth-of-type(1)</td>
+<td align="center">            </td>
+<td align="center">            </td>
+<td align="center">            </td>
+<td align="center">            </td>
+<td align="center">     Y      </td>
+<td align="center">     Y      |</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/09/07/new-log/">New Log</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-09-07T11:27:00+08:00" pubdate data-updated="true">Sep 7<span>th</span>, 2012</time>
+        
+         | <a href="/blog/2012/09/07/new-log/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content">
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -584,6 +768,7 @@ public key问题： 按照github-&gt;admin-&gt;ssh key中的说明就可以了�
   <ul id="categories">
     <li class='category'><a href='/blog/categories/c语言/'>C语言 (1)</a></li>
 <li class='category'><a href='/blog/categories/octopress/'>octopress (4)</a></li>
+<li class='category'><a href='/blog/categories/web前端/'>web前端 (1)</a></li>
 <li class='category'><a href='/blog/categories/实习生活/'>实习生活 (1)</a></li>
 <li class='category'><a href='/blog/categories/算法/'>算法 (1)</a></li>
 <li class='category'><a href='/blog/categories/转载/'>转载 (1)</a></li>
@@ -592,6 +777,14 @@ public key问题： 按照github-&gt;admin-&gt;ssh key中的说明就可以了�
 </section><section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2012/09/08/css-hack/">CSS Hack: 浏览器兼容性问题</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/09/07/new-log/">new log</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2012/09/06/support-gallery/">向Octopress博客添加相册功能</a>

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: web前端 | 心静茹水]]></title>
+  <link href="http://proudxu.github.com/blog/categories/web前端/atom.xml" rel="self"/>
+  <link href="http://proudxu.github.com/"/>
+  <updated>2012-09-08T11:53:05+08:00</updated>
+  <id>http://proudxu.github.com/</id>
+  <author>
+    <name><![CDATA[Zhao, Xuhai]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[CSS Hack: 浏览器兼容性问题]]></title>
+    <link href="http://proudxu.github.com/blog/2012/09/08/css-hack/"/>
+    <updated>2012-09-08T11:14:00+08:00</updated>
+    <id>http://proudxu.github.com/blog/2012/09/08/css-hack</id>
+    <content type="html"><![CDATA[<p>直接看实例吧，下面的程序转载自: <a href="http://www.cnblogs.com/superc/archive/2012/03/11/2390652.html">Superc</a></p>
+
+<pre><code>"\9"　例:"margin:0px auto\9;".这里的"\9"可以区别所有IE和FireFox.
+"*"　IE6、IE7可以识别.IE8、FireFox不能.
+"_"　IE6可以识别"_",IE7、IE8、FireFox不能.
+如此,就可以完全区分开IE6、IE7、IE8、FireFox了.</code></pre>
+
+
+<p></p>
+
+<p>还是不知道怎么区分.好吧,来看个例子:</p>
+
+<script src="https://gist.github.com/3671558.js?file=gistfile1.html"></script>
+
+
+<h2>    </h2>
+
+<p>附上一张CSS Hack样式属性前缀表</p>
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th align="center">              </th>
+<th align="center">     IE6    </th>
+<th align="center">     IE7    </th>
+<th align="center">     IE8    </th>
+<th align="center">   Firefox  </th>
+<th align="center">   Chrome   </th>
+<th align="center">   Safari   </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td align="center">  !important  </td>
+<td align="center">            </td>
+<td align="center">      Y     </td>
+<td align="center">            </td>
+<td align="center">      Y     </td>
+<td align="center">            </td>
+<td align="center">            |</td>
+</tr>
+<tr>
+<td></td>
+<td align="center">      _       </td>
+<td align="center">      Y     </td>
+<td align="center">            </td>
+<td align="center">            </td>
+<td align="center">            </td>
+<td align="center">            </td>
+<td align="center">            |</td>
+</tr>
+<tr>
+<td></td>
+<td align="center">      *       </td>
+<td align="center">      Y     </td>
+<td align="center">      Y     </td>
+<td align="center">            </td>
+<td align="center">            </td>
+<td align="center">            </td>
+<td align="center">            |</td>
+</tr>
+<tr>
+<td></td>
+<td align="center">      *+      </td>
+<td align="center">            </td>
+<td align="center">      Y     </td>
+<td align="center">            </td>
+<td align="center">            </td>
+<td align="center">            </td>
+<td align="center">            |</td>
+</tr>
+<tr>
+<td></td>
+<td align="center">      \9      </td>
+<td align="center">      Y     </td>
+<td align="center">      Y     </td>
+<td align="center">      Y     </td>
+<td align="center">            </td>
+<td align="center">            </td>
+<td align="center">            |</td>
+</tr>
+<tr>
+<td></td>
+<td align="center">      \0      </td>
+<td align="center">            </td>
+<td align="center">            </td>
+<td align="center">      Y     </td>
+<td align="center">            </td>
+<td align="center">            </td>
+<td align="center">            |</td>
+</tr>
+<tr>
+<td></td>
+<td align="center">nth-of-type(1)</td>
+<td align="center">            </td>
+<td align="center">            </td>
+<td align="center">            </td>
+<td align="center">            </td>
+<td align="center">     Y      </td>
+<td align="center">     Y      |</td>
+</tr>
+</tbody>
+</table>
+
+]]></content>
+  </entry>
+  
+</feed>

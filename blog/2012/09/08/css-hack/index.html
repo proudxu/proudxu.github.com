@@ -5,15 +5,14 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>指针数组与数组指针 - 心静茹水</title>
+  <title>CSS Hack: 浏览器兼容性问题 - 心静茹水</title>
   <meta name="author" content="Zhao, Xuhai">
 
   
-  <meta name="description" content="昨天从面试宝典上看了道关于指针的面试题，发现这个上次绿盟科技笔试的时候考过，当时很凌乱，有几个记混了。 题目是这样的： 定义一个整形数
-定义一个指向整形数的指针
-定义一个指向指针的指针，它指向的指针，是一个指向整形数的指针
-定义一个具有10个整形数的数组
-定义一个具有10个指针的数组， &hellip;">
+  <meta name="description" content="直接看实例吧，下面的程序转载自: Superc "\9"　例:"margin:0px auto\9;".这里的"\9"可以区别所有IE和FireFox.
+"*"　IE6、IE7可以识别.IE8、FireFox不能.
+"_"　IE6可以识别"_",IE7、IE8、FireFox不能.
+如此, &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -22,7 +21,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://proudxu.github.com/blog/2012/09/06/array-and-pointer/">
+  <link rel="canonical" href="http://proudxu.github.com/blog/2012/09/08/css-hack/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -84,7 +83,7 @@
   
   <header>
     
-      <h1 class="entry-title">指针数组与数组指针</h1>
+      <h1 class="entry-title">CSS Hack: 浏览器兼容性问题</h1>
     
     
       <p class="meta">
@@ -100,7 +99,7 @@
   
 
 
-<time datetime="2012-09-06T08:59:00+08:00" pubdate data-updated="true">Sep 6<span>th</span>, 2012</time>
+<time datetime="2012-09-08T11:14:00+08:00" pubdate data-updated="true">Sep 8<span>th</span>, 2012</time>
         
          | <a href="#disqus_thread">Comments</a>
         
@@ -109,34 +108,112 @@
   </header>
 
 
-<div class="entry-content"><p>昨天从面试宝典上看了道关于指针的面试题，发现这个上次绿盟科技笔试的时候考过，当时很凌乱，有几个记混了。</p>
+<div class="entry-content"><p>直接看实例吧，下面的程序转载自: <a href="http://www.cnblogs.com/superc/archive/2012/03/11/2390652.html">Superc</a></p>
 
-<p>题目是这样的：</p>
-
-<ul>
-<li>定义一个整形数</li>
-<li>定义一个指向整形数的指针</li>
-<li>定义一个指向指针的指针，它指向的指针，是一个指向整形数的指针</li>
-<li>定义一个具有10个整形数的数组</li>
-<li>定义一个具有10个指针的数组，这些指针都是指向整形数的</li>
-<li>定义一个指向有10个整形数 数组的指针</li>
-<li>定义一个指向函数的指针，该函数有一个整形参数 并返回一个整形数据</li>
-<li>定义一个有10个指针的数组，每个指针指向一个函数，该函数有一个整形参数，返回一个整形数</li>
-</ul>
+<pre><code>"\9"　例:"margin:0px auto\9;".这里的"\9"可以区别所有IE和FireFox.
+"*"　IE6、IE7可以识别.IE8、FireFox不能.
+"_"　IE6可以识别"_",IE7、IE8、FireFox不能.
+如此,就可以完全区分开IE6、IE7、IE8、FireFox了.</code></pre>
 
 
-<pre><code>a) int a; // An integer 
-b) int *a; // A pointer to an integer 
-c) int **a; // A pointer to a pointer to an integer 
-d) int a[10]; // An array of 10 integers 
-e) int *a[10]; // An array of 10 pointers to integers 
-f) int (*a)[10]; // A pointer to an array of 10 integers 
-g) int (*a)(int); // A pointer to a function a that takes an integer argument and returns an integer 
-h) int (*a[10])(int); // An array of 10 pointers to functions that take an integer argument and return an integer </code></pre>
+<p></p>
+
+<p>还是不知道怎么区分.好吧,来看个例子:</p>
+
+<script src="https://gist.github.com/3671558.js?file=gistfile1.html"></script>
 
 
-<p><span style="color:red; font-weight:bold">诀窍：弄清楚* [] ()的优先级</span>   <br/>
-详细解答参考这里：<a href="http://blog.csdn.net/lyl494223339/article/details/7854396">解答</a></p>
+<h2>    </h2>
+
+<p>附上一张CSS Hack样式属性前缀表</p>
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th align="center">              </th>
+<th align="center">     IE6    </th>
+<th align="center">     IE7    </th>
+<th align="center">     IE8    </th>
+<th align="center">   Firefox  </th>
+<th align="center">   Chrome   </th>
+<th align="center">   Safari   </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td align="center">  !important  </td>
+<td align="center">            </td>
+<td align="center">      Y     </td>
+<td align="center">            </td>
+<td align="center">      Y     </td>
+<td align="center">            </td>
+<td align="center">            |</td>
+</tr>
+<tr>
+<td></td>
+<td align="center">      _       </td>
+<td align="center">      Y     </td>
+<td align="center">            </td>
+<td align="center">            </td>
+<td align="center">            </td>
+<td align="center">            </td>
+<td align="center">            |</td>
+</tr>
+<tr>
+<td></td>
+<td align="center">      *       </td>
+<td align="center">      Y     </td>
+<td align="center">      Y     </td>
+<td align="center">            </td>
+<td align="center">            </td>
+<td align="center">            </td>
+<td align="center">            |</td>
+</tr>
+<tr>
+<td></td>
+<td align="center">      *+      </td>
+<td align="center">            </td>
+<td align="center">      Y     </td>
+<td align="center">            </td>
+<td align="center">            </td>
+<td align="center">            </td>
+<td align="center">            |</td>
+</tr>
+<tr>
+<td></td>
+<td align="center">      \9      </td>
+<td align="center">      Y     </td>
+<td align="center">      Y     </td>
+<td align="center">      Y     </td>
+<td align="center">            </td>
+<td align="center">            </td>
+<td align="center">            |</td>
+</tr>
+<tr>
+<td></td>
+<td align="center">      \0      </td>
+<td align="center">            </td>
+<td align="center">            </td>
+<td align="center">      Y     </td>
+<td align="center">            </td>
+<td align="center">            </td>
+<td align="center">            |</td>
+</tr>
+<tr>
+<td></td>
+<td align="center">nth-of-type(1)</td>
+<td align="center">            </td>
+<td align="center">            </td>
+<td align="center">            </td>
+<td align="center">            </td>
+<td align="center">     Y      </td>
+<td align="center">     Y      |</td>
+</tr>
+</tbody>
+</table>
+
 </div>
 
 
@@ -159,12 +236,12 @@ h) int (*a[10])(int); // An array of 10 pointers to functions that take an integ
   
 
 
-<time datetime="2012-09-06T08:59:00+08:00" pubdate data-updated="true">Sep 6<span>th</span>, 2012</time>
+<time datetime="2012-09-08T11:14:00+08:00" pubdate data-updated="true">Sep 8<span>th</span>, 2012</time>
       
 
 <span class="categories">Category:
   
-    <a class='category' href='/blog/categories/c语言/'>C语言</a>
+    <a class='category' href='/blog/categories/web前端/'>web前端</a>
   
 </span>
 
@@ -173,7 +250,7 @@ h) int (*a[10])(int); // An array of 10 pointers to functions that take an integ
 
 <span class="tags">Tags:
   
-    <a class='tag' href='/tags/指针/'>指针</a>, <a class='tag' href='/tags/数组/'>数组</a>
+    <a class='tag' href='/tags/css/'>css</a>
   
 </span>
 
@@ -182,7 +259,7 @@ h) int (*a[10])(int); // An array of 10 pointers to functions that take an integ
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://proudxu.github.com/blog/2012/09/06/array-and-pointer/" data-via="" data-counturl="http://proudxu.github.com/blog/2012/09/06/array-and-pointer/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://proudxu.github.com/blog/2012/09/08/css-hack/" data-via="" data-counturl="http://proudxu.github.com/blog/2012/09/08/css-hack/" >Tweet</a>
   
   
   
@@ -191,10 +268,8 @@ h) int (*a[10])(int); // An array of 10 pointers to functions that take an integ
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2012/09/05/add-tag-cloud-and-support-chinese/" title="Previous Post: Octopress添加tag cloud且支持中文">&laquo; Octopress添加tag cloud且支持中文</a>
+        <a class="basic-alignment left" href="/blog/2012/09/07/new-log/" title="Previous Post: new log">&laquo; new log</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2012/09/06/support-gallery/" title="Next Post: 向Octopress博客添加相册功能">向Octopress博客添加相册功能 &raquo;</a>
       
     </p>
   </footer>
@@ -292,8 +367,8 @@ h) int (*a[10])(int); // An array of 10 pointers to functions that take an integ
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://proudxu.github.com/blog/2012/09/06/array-and-pointer/';
-        var disqus_url = 'http://proudxu.github.com/blog/2012/09/06/array-and-pointer/';
+        var disqus_identifier = 'http://proudxu.github.com/blog/2012/09/08/css-hack/';
+        var disqus_url = 'http://proudxu.github.com/blog/2012/09/08/css-hack/';
         var disqus_script = 'embed.js';
       
     (function () {
