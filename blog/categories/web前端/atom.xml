@@ -4,7 +4,7 @@
   <title><![CDATA[Category: web前端 | 心静茹水]]></title>
   <link href="http://proudxu.github.com/blog/categories/web前端/atom.xml" rel="self"/>
   <link href="http://proudxu.github.com/"/>
-  <updated>2012-09-10T12:24:29+08:00</updated>
+  <updated>2012-09-10T12:26:28+08:00</updated>
   <id>http://proudxu.github.com/</id>
   <author>
     <name><![CDATA[Zhao, Xuhai]]></name>
@@ -26,7 +26,7 @@
 
 <pre><code><textarea ...>string</textarea>
 可是这个issue的description是这样的。。。
-<textarea cols="40" rows=“2”> &lt;feature name= http://... required= true /&gt;...  </textarea>
+<textarea cols="60" rows=“2”> &lt;feature name= http://... required= true /&gt;...  </textarea>
 </code></pre>
 
 
