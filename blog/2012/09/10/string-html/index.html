@@ -105,10 +105,10 @@
 <div class="entry-content"><p>还有一周就可以回学校然后回家了，上周五很顺利的跟老板和经理请了两周假，所以这周得认真工作了。 <br/>
 接着测试我写的插件，果然发现了问题。。。  <br/>
 大概是这样的，这个插件是JIRA系统间传递issues，每个issue有很多的field，老板为了保证安全，要求在传输的时候检测每个域，看有没有指定的敏感关键字，如果有要求用户传输issue中进行修改，今天测试的时候，发现有个description域传输有问题，即如果description中含有关键字，要求用户在textarea中修改，程序再读取textarea中的内容重新存入issue中供传输。  <br/>
-可是今天传输过程中，发现有个issue的description居然有很多html标签，显示到textarea中倒是没问题，可是读取的时候就郁闷了：  <br/>
-本来应该是这样：</p>
+可是今天传输过程中，发现有个issue的description居然有很多html标签，显示到textarea中倒是没问题，可是读取的时候就郁闷了：</p>
 
-<pre><code><textarea ...>string</textarea>
+<pre><code>本来应该是这样：    
+<textarea ...>string</textarea>
 可是这个issue的description是这样的。。。
 <textarea cols="60" rows=“2”> &lt;feature name= http://... required= true /&gt;...  </textarea>
 </code></pre>
