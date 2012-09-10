@@ -9,7 +9,7 @@
   <meta name="author" content="Zhao, Xuhai">
 
   
-  <meta name="description" content="转载自Blogging like a hacker h1. Blogging Like a Hacker p(meta). 17 Nov 2008 - San Francisco Back in 2000, when I thought I was going to be a &hellip;">
+  <meta name="description" content="经过了几天的折腾，昨天终于把octopress博客建立好了。更新起来很方便，只需要编写类似Latex语言的markdown文件，然后rake generate, rake deploy就可以啦。 今天加入了评论功能，这里主要记录下添加评论的过程。 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -74,6 +74,82 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/09/03/config-comment-on-octopress/">给octopress添加Disqus评论功能</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-09-03T19:16:00+08:00" pubdate data-updated="true">Sep 3<span>rd</span>, 2012</time>
+        
+         | <a href="/blog/2012/09/03/config-comment-on-octopress/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>经过了几天的折腾，昨天终于把octopress博客建立好了。更新起来很方便，只需要编写类似Latex语言的markdown文件，然后<code>rake generate</code>, <code>rake deploy</code>就可以啦。</p>
+
+<p>今天加入了评论功能，这里主要记录下添加评论的过程。Octopress中其实已经集成了Disqus评论插件，只需要简单设置一下就可以。</p>
+
+<ul>
+<li><p><strong>登录<a href="http://disqus.com">Disqus网站</a></strong>, 然后注册用户名密码，邮箱验证。</p></li>
+<li><p>单击<em>Get this on your site</em>按钮</p></li>
+</ul>
+
+
+<center>
+<img src="/images/add_comment1.PNG" >
+</center>
+
+
+<ul>
+<li><strong>填写网站的信息</strong></li>
+</ul>
+
+
+<center>
+<img src="/images/add_comment2.PNG">
+</center>
+
+
+<ul>
+<li>修改_config.yml文件:</li>
+</ul>
+
+
+<pre><code>#Disqus Comments
+disqus_short_name: Site Shortname
+disqus_show_comment_count: true</code></pre>
+
+
+<p>之后就可以通过<code>rake new_post['title']</code>创建日志，日志中设定：</p>
+
+<pre><code>comment: true
+</code></pre>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -298,7 +374,7 @@ public key问题： 按照github-&gt;admin-&gt;ssh key中的说明就可以了�
   <ul id="categories">
     <li class='category'><a href='/blog/categories/c语言/'>C语言 (1)</a></li>
 <li class='category'><a href='/blog/categories/octopress/'>octopress (4)</a></li>
-<li class='category'><a href='/blog/categories/web前端/'>web前端 (1)</a></li>
+<li class='category'><a href='/blog/categories/web前端/'>web前端 (2)</a></li>
 <li class='category'><a href='/blog/categories/实习生活/'>实习生活 (1)</a></li>
 <li class='category'><a href='/blog/categories/算法/'>算法 (1)</a></li>
 <li class='category'><a href='/blog/categories/转载/'>转载 (1)</a></li>
@@ -307,6 +383,10 @@ public key问题： 按照github-&gt;admin-&gt;ssh key中的说明就可以了�
 </section><section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2012/09/10/string-html/">textarea的内容中含有html的情况</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2012/09/08/css-hack/">CSS Hack: 浏览器兼容性问题</a>

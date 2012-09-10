@@ -5,30 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>心静茹水</title>
+  <title>textarea的内容中含有html的情况 - 心静茹水</title>
   <meta name="author" content="Zhao, Xuhai">
 
   
-  <meta name="description" content="CSS Hack
-Disqus
-comment
-intel
-intern
-octopress
-tag
-textarea
-中文支持
-兼容
-函数指针
-指针
-排序
-数组
-相册
-评论 Categories C语言 (1)
-octopress (4)
-web前端 (2)
-实习生活 (1)
-算法 (1) &hellip;">
+  <meta name="description" content="还有一周就可以回学校然后回家了，上周五很顺利的跟老板和经理请了两周假，所以这周得认真工作了。 接着测试我写的插件，果然发现了问题。。。 大概是这样的，这个插件是JIRA系统间传递issues，每个issue有很多的field，老板为了保证安全，要求在传输的时候检测每个域，看有没有指定的敏感关键字， &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -37,7 +18,7 @@ web前端 (2)
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://proudxu.github.com/blog/tags/">
+  <link rel="canonical" href="http://proudxu.github.com/blog/2012/09/10/string-html/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -92,31 +73,117 @@ web前端 (2)
   <div id="main">
     <div id="content">
       <div>
-<article role="article">
+<article class="hentry" role="article">
   
-  <div id="tag-archives">
-  <ul class="cloud">
-<li><a style="font-size: 100%" href="/tags/css-hack/">CSS Hack</a></li>
-<li><a style="font-size: 100%" href="/tags/disqus/">Disqus</a></li>
-<li><a style="font-size: 100%" href="/tags/comment/">comment</a></li>
-<li><a style="font-size: 176%" href="/tags/intel/">intel</a></li>
-<li><a style="font-size: 100%" href="/tags/intern/">intern</a></li>
-<li><a style="font-size: 220%" href="/tags/octopress/">octopress</a></li>
-<li><a style="font-size: 100%" href="/tags/tag/">tag</a></li>
-<li><a style="font-size: 100%" href="/tags/textarea/">textarea</a></li>
-<li><a style="font-size: 100%" href="/tags/%E4%B8%AD%E6%96%87%E6%94%AF%E6%8C%81/">中文支持</a></li>
-<li><a style="font-size: 100%" href="/tags/%E5%85%BC%E5%AE%B9/">兼容</a></li>
-<li><a style="font-size: 100%" href="/tags/%E5%87%BD%E6%95%B0%E6%8C%87%E9%92%88/">函数指针</a></li>
-<li><a style="font-size: 100%" href="/tags/%E6%8C%87%E9%92%88/">指针</a></li>
-<li><a style="font-size: 100%" href="/tags/%E6%8E%92%E5%BA%8F/">排序</a></li>
-<li><a style="font-size: 100%" href="/tags/%E6%95%B0%E7%BB%84/">数组</a></li>
-<li><a style="font-size: 100%" href="/tags/%E7%9B%B8%E5%86%8C/">相册</a></li>
-<li><a style="font-size: 100%" href="/tags/%E8%AF%84%E8%AE%BA/">评论</a></li>
+  <header>
+    
+      <h1 class="entry-title">Textarea的内容中含有html的情况</h1>
+    
+    
+      <p class="meta">
+        
 
-  </ul>
-</div>
+
+
+
+
+
+
+
   
+
+
+<time datetime="2012-09-10T11:22:00+08:00" pubdate data-updated="true">Sep 10<span>th</span>, 2012</time>
+        
+         | <a href="#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>还有一周就可以回学校然后回家了，上周五很顺利的跟老板和经理请了两周假，所以这周得认真工作了。 <br/>
+接着测试我写的插件，果然发现了问题。。。  <br/>
+大概是这样的，这个插件是JIRA系统间传递issues，每个issue有很多的field，老板为了保证安全，要求在传输的时候检测每个域，看有没有指定的敏感关键字，如果有要求用户传输issue中进行修改，今天测试的时候，发现有个description域传输有问题，即如果description中含有关键字，要求用户在textarea中修改，程序再读取textarea中的内容重新存入issue中供传输。  <br/>
+可是今天传输过程中，发现有个issue的description居然有很多html标签，显示到textarea中倒是没问题，可是读取的时候就郁闷了：  <br/>
+本来应该是这样：</p>
+
+<pre><code><textarea ...>string</textarea>
+可是这个issue的description是这样的。。。
+<textarea...> <feature name= http://... required= true />...    </textarea>
+</code></pre>
+
+
+<p>  <br/>
+这样的话用textarea的value属性读取的时候就会遇到问题，双引号，大于小于号都会对value产生影响，导致传过去的有错误。  <br/>
+我记得好像有个类似的函数来用字符串传输html的，但函数名称想不起来了，只能用java的字符串替换函数将&#8221;替换为&#34;，将&lt;>分别替换为&lt; &gt;   <br/>
+然后就传输正确了。好惊险啊，这要是突然出了什么大bug，我就走不了了。。。</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Zhao, Xuhai</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-09-10T11:22:00+08:00" pubdate data-updated="true">Sep 10<span>th</span>, 2012</time>
+      
+
+<span class="categories">Category:
+  
+    <a class='category' href='/blog/categories/web前端/'>web前端</a>
+  
+</span>
+
+
+      
+
+<span class="tags">Tags:
+  
+    <a class='tag' href='/tags/textarea/'>textarea</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://proudxu.github.com/blog/2012/09/10/string-html/" data-via="" data-counturl="http://proudxu.github.com/blog/2012/09/10/string-html/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2012/09/08/css-hack/" title="Previous Post: CSS Hack: 浏览器兼容性问题">&laquo; CSS Hack: 浏览器兼容性问题</a>
+      
+      
+    </p>
+  </footer>
 </article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
 
 </div>
 
@@ -203,7 +270,10 @@ web前端 (2)
       var disqus_shortname = 'proudxu';
       
         
-        var disqus_script = 'count.js';
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://proudxu.github.com/blog/2012/09/10/string-html/';
+        var disqus_url = 'http://proudxu.github.com/blog/2012/09/10/string-html/';
+        var disqus_script = 'embed.js';
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
