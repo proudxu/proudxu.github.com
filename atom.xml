@@ -4,7 +4,7 @@
   <title><![CDATA[心静茹水]]></title>
   <link href="http://proudxu.github.com/atom.xml" rel="self"/>
   <link href="http://proudxu.github.com/"/>
-  <updated>2012-09-10T13:22:27+08:00</updated>
+  <updated>2012-09-11T09:07:11+08:00</updated>
   <id>http://proudxu.github.com/</id>
   <author>
     <name><![CDATA[Zhao, Xuhai]]></name>
@@ -12,6 +12,20 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[binary tree sort]]></title>
+    <link href="http://proudxu.github.com/blog/2012/09/11/binary-tree-sort/"/>
+    <updated>2012-09-11T09:02:00+08:00</updated>
+    <id>http://proudxu.github.com/blog/2012/09/11/binary-tree-sort</id>
+    <content type="html"><![CDATA[<p>唉，在公司实习都呆傻了，现在写起C++的程序都这么费劲。早上试着写了个二叉树排序都花了半个多小时，这要是半年前的我。。。</p>
+
+<script src="https://gist.github.com/3695218.js?file=gistfile1.cpp"></script>
+
+
+<p></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[textarea的内容中含有html的情况]]></title>
