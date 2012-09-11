@@ -4,7 +4,7 @@
   <title><![CDATA[Category: 算法 | 心静茹水]]></title>
   <link href="http://proudxu.github.com/blog/categories/算法/atom.xml" rel="self"/>
   <link href="http://proudxu.github.com/"/>
-  <updated>2012-09-11T09:07:11+08:00</updated>
+  <updated>2012-09-11T09:09:50+08:00</updated>
   <id>http://proudxu.github.com/</id>
   <author>
     <name><![CDATA[Zhao, Xuhai]]></name>
@@ -14,7 +14,7 @@
 
   
   <entry>
-    <title type="html"><![CDATA[binary tree sort]]></title>
+    <title type="html"><![CDATA[二叉树排序]]></title>
     <link href="http://proudxu.github.com/blog/2012/09/11/binary-tree-sort/"/>
     <updated>2012-09-11T09:02:00+08:00</updated>
     <id>http://proudxu.github.com/blog/2012/09/11/binary-tree-sort</id>
@@ -28,7 +28,7 @@
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[hello]]></title>
+    <title type="html"><![CDATA[冒泡排序]]></title>
     <link href="http://proudxu.github.com/blog/2012/09/02/hello/"/>
     <updated>2012-09-02T23:10:00+08:00</updated>
     <id>http://proudxu.github.com/blog/2012/09/02/hello</id>
