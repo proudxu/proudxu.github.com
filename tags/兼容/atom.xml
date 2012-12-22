@@ -4,7 +4,7 @@
   <title><![CDATA[Tag: 兼容 | 心静茹水]]></title>
   <link href="http://proudxu.github.com/tags/兼容/atom.xml" rel="self"/>
   <link href="http://proudxu.github.com/"/>
-  <updated>2012-12-22T15:24:54+08:00</updated>
+  <updated>2012-12-22T15:27:37+08:00</updated>
   <id>http://proudxu.github.com/</id>
   <author>
     <name><![CDATA[Zhao, Xuhai]]></name>
@@ -35,12 +35,40 @@
 
 <h2>    </h2>
 
-<p>还有这个例子也不错：</p>
+<p>还有这个例子也不错：   <br/>
+``` html
+&lt;!DOCTYPE html><br/>
+<html><br/>
+<head></p>
 
-<script src="https://gist.github.com/3671558.js?file=gistfile1.html"></script>
+<pre><code>&lt;title&gt;Css Hack&lt;/title&gt;  
+&lt;style&gt;  
+#test   
+{   
+    width:300px;   
+    height:300px;   
 
+    background-color:blue;      /*firefox*/
+    background-color:red\9;      /*all ie*/
+    background-color:yellow\0;    /*ie8*/
+    +background-color:pink;        /*ie7*/
+    _background-color:orange;       /*ie6*/
+}  
+:root #test { background-color:purple\9; }  /*ie9*/
+@media all and (min-width:0px){ #test {background-color:black\0;} }  /*opera*/
+@media screen and (-webkit-min-device-pixel-ratio:0){ #test {background-color:gray;} }  /*chrome and safari*/
+&lt;/style&gt;  
+</code></pre>
 
-<p>   <br/>
+<p></head><br/>
+<body></p>
+
+<pre><code>&lt;div id="test"&gt;test&lt;/div&gt;  
+</code></pre>
+
+<p></body><br/>
+</html>
+```
 附上一张CSS Hack样式属性前缀表</p>
 
 <center>

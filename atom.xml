@@ -4,7 +4,7 @@
   <title><![CDATA[心静茹水]]></title>
   <link href="http://proudxu.github.com/atom.xml" rel="self"/>
   <link href="http://proudxu.github.com/"/>
-  <updated>2012-12-22T15:24:54+08:00</updated>
+  <updated>2012-12-22T15:27:37+08:00</updated>
   <id>http://proudxu.github.com/</id>
   <author>
     <name><![CDATA[Zhao, Xuhai]]></name>
@@ -775,11 +775,60 @@
 
 <p>还有这个例子也不错：</p>
 
-<script src="https://gist.github.com/3671558.js?file=gistfile1.html"></script>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="cp">&lt;!DOCTYPE html&gt;</span>
+</span><span class='line'><span class="nt">&lt;html&gt;</span>
+</span><span class='line'><span class="nt">&lt;head&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;title&gt;</span>Css Hack<span class="nt">&lt;/title&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;style&gt;</span>
+</span><span class='line'>    <span class="nf">#test</span>
+</span><span class='line'>    <span class="p">{</span>
+</span><span class='line'>        <span class="k">width</span><span class="o">:</span><span class="m">300px</span><span class="p">;</span>
+</span><span class='line'>        <span class="k">height</span><span class="o">:</span><span class="m">300px</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'>        <span class="k">background-color</span><span class="o">:</span><span class="nb">blue</span><span class="p">;</span>      <span class="c">/*firefox*/</span>
+</span><span class='line'>        <span class="k">background-color</span><span class="o">:</span><span class="nb">red</span><span class="err">\</span><span class="m">9</span><span class="p">;</span>      <span class="c">/*all ie*/</span>
+</span><span class='line'>        <span class="k">background-color</span><span class="o">:</span><span class="nb">yellow</span><span class="err">\</span><span class="m">0</span><span class="p">;</span>    <span class="c">/*ie8*/</span>
+</span><span class='line'>        <span class="o">+</span><span class="k">background-color</span><span class="o">:</span><span class="nb">pink</span><span class="p">;</span>        <span class="c">/*ie7*/</span>
+</span><span class='line'>        <span class="n">_background</span><span class="o">-</span><span class="k">color</span><span class="o">:</span><span class="nb">orange</span><span class="p">;</span>       <span class="c">/*ie6*/</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>    <span class="nd">:root</span> <span class="nf">#test</span> <span class="p">{</span> <span class="k">background-color</span><span class="o">:</span><span class="nb">purple</span><span class="err">\</span><span class="m">9</span><span class="p">;</span> <span class="p">}</span>  <span class="c">/*ie9*/</span>
+</span><span class='line'>    <span class="k">@media</span> <span class="nt">all</span> <span class="nt">and</span> <span class="o">(</span><span class="nt">min-width</span><span class="nd">:0px</span><span class="o">)</span><span class="p">{</span> <span class="nf">#test</span> <span class="p">{</span><span class="k">background-color</span><span class="o">:</span><span class="nb">black</span><span class="err">\</span><span class="m">0</span><span class="p">;}</span> <span class="p">}</span>  <span class="c">/*opera*/</span>
+</span><span class='line'>    <span class="k">@media</span> <span class="nt">screen</span> <span class="nt">and</span> <span class="o">(</span><span class="nt">-webkit-min-device-pixel-ratio</span><span class="nd">:0</span><span class="o">)</span><span class="p">{</span> <span class="nf">#test</span> <span class="p">{</span><span class="k">background-color</span><span class="o">:</span><span class="nb">gray</span><span class="p">;}</span> <span class="p">}</span>  <span class="c">/*chrome and safari*/</span>
+</span><span class='line'>    <span class="nt">&lt;/style&gt;</span>
+</span><span class='line'><span class="nt">&lt;/head&gt;</span>
+</span><span class='line'><span class="nt">&lt;body&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;test&quot;</span><span class="nt">&gt;</span>test<span class="nt">&lt;/div&gt;</span>
+</span><span class='line'><span class="nt">&lt;/body&gt;</span>
+</span><span class='line'><span class="nt">&lt;/html&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
-<p>   <br/>
-附上一张CSS Hack样式属性前缀表</p>
+<p>附上一张CSS Hack样式属性前缀表</p>
 
 <center>
 <img src="http://proudxu.github.com/images/css_hack.jpg">
