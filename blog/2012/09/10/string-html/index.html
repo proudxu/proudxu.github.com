@@ -119,20 +119,25 @@
 然后就传输正确了。好惊险啊，这要是突然出了什么大bug，我就走不了了。。。  <br/>
 附上<a href="http://114.xixik.com/character/">转义字符表</a></p>
 
-<p> &#8220;` ruby Discover if a number is prime http://www.noulakaz.net/weblog/2007/03/18/a-regular-expression-to-check-for-prime-numbers/ Source Article
- class Fixnum
-   def prime?</p>
+<figure class='code'><figcaption><span>Discover if a number is prime </span><a href='http://www.noulakaz.net/weblog/2007/03/18/a-regular-expression-to-check-for-prime-numbers/'>Source Article</a></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'> <span class="k">class</span> <span class="nc">Fixnum</span>
+</span><span class='line'>   <span class="k">def</span> <span class="nf">prime?</span>
+</span><span class='line'>     <span class="p">(</span><span class="s1">&#39;1&#39;</span> <span class="o">*</span> <span class="nb">self</span><span class="p">)</span> <span class="o">!~</span> <span class="sr">/^1?$|^(11+?)\1+$/</span>
+</span><span class='line'>   <span class="k">end</span>
+</span><span class='line'>  <span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
 
-<pre><code> ('1' * self) !~ /^1?$|^(11+?)\1+$/
-</code></pre>
 
-<p>   end
-  end
- &#8220;`</p>
 
-<p> <code>
-$ sudo make me a sandwich
-</code></p>
+
+<figure class='code'><figcaption><span>Discover if a number is prime </span><a href='http://www.noulakaz.net/weblog/2007/03/18/a-regular-expression-to-check-for-prime-numbers/'>Source Article</a></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="err">$</span> <span class="n">sudo</span> <span class="n">make</span> <span class="n">me</span> <span class="n">a</span> <span class="n">sandwich</span>
+</span></code></pre></td></tr></table></div></figure>
+
 </div>
 
 
