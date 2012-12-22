@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Lua | 心静茹水]]></title>
   <link href="http://proudxu.github.com/blog/categories/lua/atom.xml" rel="self"/>
   <link href="http://proudxu.github.com/"/>
-  <updated>2012-12-22T15:21:19+08:00</updated>
+  <updated>2012-12-22T15:23:43+08:00</updated>
   <id>http://proudxu.github.com/</id>
   <author>
     <name><![CDATA[Zhao, Xuhai]]></name>
@@ -28,7 +28,7 @@ s:13:"average_grade";s:3:"5.0";s:6:"up_num";s:1:"0";s:13:"reply_content";s:0:"";
 但网上一些函数都只是把lua中table类型的数据转换成字符串，如此而已，而且转换成的字符串样式各异，都没办法解析如上的字符串成数组。。。  <br/>
 本来想今天写一个的，无意之间发现昨天临走的时候打开的一个页面中有这样的一个函数，仔细看了看，似乎很满足我的需求，运行了一次之后，果然把上面的字符串解析了出来！！但好像有一个问题，就是如果传进去的数组中含有值为数字的字符串，序列化之后就识别成数字而不是字符串。。。 代码如下：</p>
 
-<p>``` lua Lua port of PHP serialization functions
+<p>``` lua Lua port of PHP serialization functions http://gitorious.org/nutria/seawolf/blobs/ae2d5e6919cff5754f9ed5f04c50f70070300f9e/variable/serialize/serialize.lua
 --[[
   @file
   Lua port of PHP serialization functions.</p>

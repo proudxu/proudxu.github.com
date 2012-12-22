@@ -125,7 +125,7 @@ a:9:{s:10:"comment_id";s:1:"1";s:7:"user_id";s:7 &hellip;">
 但网上一些函数都只是把lua中table类型的数据转换成字符串，如此而已，而且转换成的字符串样式各异，都没办法解析如上的字符串成数组。。。  <br/>
 本来想今天写一个的，无意之间发现昨天临走的时候打开的一个页面中有这样的一个函数，仔细看了看，似乎很满足我的需求，运行了一次之后，果然把上面的字符串解析了出来！！但好像有一个问题，就是如果传进去的数组中含有值为数字的字符串，序列化之后就识别成数字而不是字符串。。。 代码如下：</p>
 
-<figure class='code'><figcaption><span>Lua port of PHP serialization functions</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><figcaption><span>Lua port of PHP serialization functions </span><a href='http://gitorious.org/nutria/seawolf/blobs/ae2d5e6919cff5754f9ed5f04c50f70070300f9e/variable/serialize/serialize.lua'>link</a></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
