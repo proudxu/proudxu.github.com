@@ -118,26 +118,6 @@
 我记得好像有个类似的函数来用字符串传输html的，但函数名称想不起来了，只能用java的字符串替换函数将&#8221;替换为<code>&amp;quot;</code>，将&lt;>分别替换为<code>&amp;lt;</code>，<code>&amp;gt;</code>  <br/>
 然后就传输正确了。好惊险啊，这要是突然出了什么大bug，我就走不了了。。。  <br/>
 附上<a href="http://114.xixik.com/character/">转义字符表</a></p>
-
-<figure class='code'><figcaption><span>Discover if a number is prime </span><a href='http://www.noulakaz.net/weblog/2007/03/18/a-regular-expression-to-check-for-prime-numbers/'>Source Article</a></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'> <span class="k">class</span> <span class="nc">Fixnum</span>
-</span><span class='line'>   <span class="k">def</span> <span class="nf">prime?</span>
-</span><span class='line'>     <span class="p">(</span><span class="s1">&#39;1&#39;</span> <span class="o">*</span> <span class="nb">self</span><span class="p">)</span> <span class="o">!~</span> <span class="sr">/^1?$|^(11+?)\1+$/</span>
-</span><span class='line'>   <span class="k">end</span>
-</span><span class='line'>  <span class="k">end</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><figcaption><span>Discover if a number is prime </span><a href='http://www.noulakaz.net/weblog/2007/03/18/a-regular-expression-to-check-for-prime-numbers/'>Source Article</a></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="err">$</span> <span class="n">sudo</span> <span class="n">make</span> <span class="n">me</span> <span class="n">a</span> <span class="n">sandwich</span>
-</span></code></pre></td></tr></table></div></figure>
-
 </div>
 
 
@@ -215,6 +195,7 @@
   <h1>Categories</h1>
   <ul id="categories">
     <li class='category'><a href='/blog/categories/c语言/'>C语言 (1)</a></li>
+<li class='category'><a href='/blog/categories/lua/'>Lua (1)</a></li>
 <li class='category'><a href='/blog/categories/octopress/'>octopress (4)</a></li>
 <li class='category'><a href='/blog/categories/web前端/'>web前端 (2)</a></li>
 <li class='category'><a href='/blog/categories/实习生活/'>实习生活 (1)</a></li>
@@ -225,6 +206,10 @@
 </section><section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2012/12/22/lua-php-serialize/">Lua中实现php序列化及反序列化函数</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2012/09/11/binary-tree-sort/">二叉树排序</a>
@@ -260,10 +245,6 @@
     
       <li class="post">
         <a href="/blog/2012/09/03/work-in-intel/">work in intel</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/09/02/hello/">冒泡排序</a>
       </li>
     
   </ul>

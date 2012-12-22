@@ -9,7 +9,11 @@
   <meta name="author" content="Zhao, Xuhai">
 
   
-  <meta name="description" content="今天上班又不务正业了，主要是昨天晚上就完成了老板最近布置的修改JIRA插件，添加敏感关键字检测及提供修改功能的任务，上午给老板演示了一下，在他提出的各种极端情况下插件都能很好的工作，老板让我今天在界面上加些交互信息，使交互更加友好。 整个白天都在折腾我的Octopress博客，这个果然很需要耐心， &hellip;">
+  <meta name="description" content="昨天从面试宝典上看了道关于指针的面试题，发现这个上次绿盟科技笔试的时候考过，当时很凌乱，有几个记混了。 题目是这样的： 定义一个整形数
+定义一个指向整形数的指针
+定义一个指向指针的指针，它指向的指针，是一个指向整形数的指针
+定义一个具有10个整形数的数组
+定义一个具有10个指针的数组， &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -74,6 +78,71 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/09/06/array-and-pointer/">指针数组与数组指针</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-09-06T08:59:00+08:00" pubdate data-updated="true">Sep 6<span>th</span>, 2012</time>
+        
+         | <a href="/blog/2012/09/06/array-and-pointer/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>昨天从面试宝典上看了道关于指针的面试题，发现这个上次绿盟科技笔试的时候考过，当时很凌乱，有几个记混了。</p>
+
+<p>题目是这样的：</p>
+
+<ul>
+<li>定义一个整形数</li>
+<li>定义一个指向整形数的指针</li>
+<li>定义一个指向指针的指针，它指向的指针，是一个指向整形数的指针</li>
+<li>定义一个具有10个整形数的数组</li>
+<li>定义一个具有10个指针的数组，这些指针都是指向整形数的</li>
+<li>定义一个指向有10个整形数 数组的指针</li>
+<li>定义一个指向函数的指针，该函数有一个整形参数 并返回一个整形数据</li>
+<li>定义一个有10个指针的数组，每个指针指向一个函数，该函数有一个整形参数，返回一个整形数</li>
+</ul>
+
+
+<pre><code>a) int a; // An integer 
+b) int *a; // A pointer to an integer 
+c) int **a; // A pointer to a pointer to an integer 
+d) int a[10]; // An array of 10 integers 
+e) int *a[10]; // An array of 10 pointers to integers 
+f) int (*a)[10]; // A pointer to an array of 10 integers 
+g) int (*a)(int); // A pointer to a function a that takes an integer argument and returns an integer 
+h) int (*a[10])(int); // An array of 10 pointers to functions that take an integer argument and return an integer </code></pre>
+
+
+<p><span style="color:red; font-weight:bold">诀窍：弄清楚* [] ()的优先级</span>   <br/>
+详细解答参考这里：<a href="http://blog.csdn.net/lyl494223339/article/details/7854396">解答</a></p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -347,47 +416,6 @@ public key问题： 按照github-&gt;admin-&gt;ssh key中的说明就可以了�
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/09/02/hello/">冒泡排序</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-09-02T23:10:00+08:00" pubdate data-updated="true">Sep 2<span>nd</span>, 2012</time>
-        
-         | <a href="/blog/2012/09/02/hello/#disqus_thread">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>冒泡排序</p>
-
-<script src="https://gist.github.com/3600541.js?file=gistfile1.cpp"></script>
-
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/3/">&larr; Older</a>
@@ -404,6 +432,7 @@ public key问题： 按照github-&gt;admin-&gt;ssh key中的说明就可以了�
   <h1>Categories</h1>
   <ul id="categories">
     <li class='category'><a href='/blog/categories/c语言/'>C语言 (1)</a></li>
+<li class='category'><a href='/blog/categories/lua/'>Lua (1)</a></li>
 <li class='category'><a href='/blog/categories/octopress/'>octopress (4)</a></li>
 <li class='category'><a href='/blog/categories/web前端/'>web前端 (2)</a></li>
 <li class='category'><a href='/blog/categories/实习生活/'>实习生活 (1)</a></li>
@@ -414,6 +443,10 @@ public key问题： 按照github-&gt;admin-&gt;ssh key中的说明就可以了�
 </section><section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2012/12/22/lua-php-serialize/">Lua中实现php序列化及反序列化函数</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2012/09/11/binary-tree-sort/">二叉树排序</a>
@@ -449,10 +482,6 @@ public key问题： 按照github-&gt;admin-&gt;ssh key中的说明就可以了�
     
       <li class="post">
         <a href="/blog/2012/09/03/work-in-intel/">work in intel</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/09/02/hello/">冒泡排序</a>
       </li>
     
   </ul>

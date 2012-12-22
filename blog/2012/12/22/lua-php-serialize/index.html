@@ -5,7 +5,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>心静茹水</title>
+  <title>Lua中实现php序列化及反序列化函数 - 心静茹水</title>
   <meta name="author" content="Zhao, Xuhai">
 
   
@@ -19,7 +19,7 @@ a:9:{s:10:"comment_id";s:1:"1";s:7:"user_id";s:7:" &hellip;">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://proudxu.github.com/">
+  <link rel="canonical" href="http://proudxu.github.com/blog/2012/12/22/lua-php-serialize/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -73,15 +73,12 @@ a:9:{s:10:"comment_id";s:1:"1";s:7:"user_id";s:7:" &hellip;">
 </nav>
   <div id="main">
     <div id="content">
-      <div class="blog-index">
+      <div>
+<article class="hentry" role="article">
   
-  
-  
-    <article>
-      
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2012/12/22/lua-php-serialize/">Lua中实现php序列化及反序列化函数</a></h1>
+      <h1 class="entry-title">Lua中实现php序列化及反序列化函数</h1>
     
     
       <p class="meta">
@@ -99,14 +96,14 @@ a:9:{s:10:"comment_id";s:1:"1";s:7:"user_id";s:7:" &hellip;">
 
 <time datetime="2012-12-22T15:07:00+08:00" pubdate data-updated="true">Dec 22<span>nd</span>, 2012</time>
         
-         | <a href="/blog/2012/12/22/lua-php-serialize/#disqus_thread">Comments</a>
+         | <a href="#disqus_thread">Comments</a>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>好高兴啊，昨天翻遍了lua自带的库，又在网上找了一天如何在lua中序列化以及反序列化，但结果都不是我要的，因为我要在lua中反序列化由php序列化函数序列化的一个字符串，比如这样的：</p>
+<div class="entry-content"><p>好高兴啊，昨天翻遍了lua自带的库，又在网上找了一天如何在lua中序列化以及反序列化，但结果都不是我要的，因为我要在lua中反序列化由php序列化函数序列化的一个字符串，比如这样的：</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>a:9:{s:10:"comment_id";s:1:"1";s:7:"user_id";s:7:"7082457";s:9:"user_name";s:9:"putulbaby";s:11:"user_avatar";s:68:"http://avatar.bbs.miui.com/data/avatar/001/05/37/38_avatar_small.jpg";s:15:"comment_content";s:63:"喜欢蓝色，就这么定了～～～～～～～～～～～";s:13:"comment_grade";s:1:"1";s:13:"average_grade";s:3:"5.0";s:6:"up_num";s:1:"0";s:13:"reply_content";s:0:"";}</span></code></pre></td></tr></table></div></figure>
@@ -647,65 +644,16 @@ a:9:{s:10:"comment_id";s:1:"1";s:7:"user_id";s:7:" &hellip;">
 
 <p>之后还遇到一个问题，我的序列化的数据是从redis中通过lrange方法读出来的，我问了老板，读进去的时候已经被php序列化了，但读出来的我认为是序列化的数据用lua中的type函数检测后发现是table类型的。。。这样就不能直接套用unserialize方法进行反序列化了。之后我用lua中便利数组的方法 for key, value in pairs(lists) do print(key .. value) end ,发现序列化的值在value当中，这样就好办了，直接把value反序列化就可以了。好辛苦。。。。</p>
 </div>
-  
-  
 
 
-    </article>
-  
-  
-    <article>
+  <footer>
+    <p class="meta">
       
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/09/11/binary-tree-sort/">二叉树排序</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
   
 
+<span class="byline author vcard">Posted by <span class="fn">Zhao, Xuhai</span></span>
 
-<time datetime="2012-09-11T09:02:00+08:00" pubdate data-updated="true">Sep 11<span>th</span>, 2012</time>
-        
-         | <a href="/blog/2012/09/11/binary-tree-sort/#disqus_thread">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>唉，在公司实习都呆傻了，现在写起C++的程序都这么费劲。早上试着写了个二叉树排序都花了半个多小时，这要是半年前的我。。。</p>
-
-<script src="https://gist.github.com/3695218.js?file=gistfile1.cpp"></script>
-
-
-<p></p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
       
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/09/10/string-html/">Textarea的内容中含有html的情况</a></h1>
-    
-    
-      <p class="meta">
-        
 
 
 
@@ -717,185 +665,47 @@ a:9:{s:10:"comment_id";s:1:"1";s:7:"user_id";s:7:" &hellip;">
   
 
 
-<time datetime="2012-09-10T11:22:00+08:00" pubdate data-updated="true">Sep 10<span>th</span>, 2012</time>
-        
-         | <a href="/blog/2012/09/10/string-html/#disqus_thread">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>还有一周就可以回学校然后回家了，上周五很顺利的跟老板和经理请了两周假，所以这周得认真工作了。 <br/>
-接着测试我写的插件，果然发现了问题。。。  <br/>
-大概是这样的，这个插件是JIRA系统间传递issues，每个issue有很多的field，老板为了保证安全，要求在传输的时候检测每个域，看有没有指定的敏感关键字，如果有要求用户传输issue中进行修改，今天测试的时候，发现有个description域传输有问题，即如果description中含有关键字，要求用户在textarea中修改，程序再读取textarea中的内容重新存入issue中供传输。  <br/>
-可是今天传输过程中，发现有个issue的description居然有很多html标签，显示到textarea中倒是没问题，可是读取的时候就郁闷了：</p>
-
-<pre><code>本来应该是这样：    
-<textarea ...>string</textarea>
-可是这个issue的description是这样的。。。
-<textarea cols="60" rows=“2”> &lt;feature name= &quot;http://... required= true &quot; /&gt;... </textarea>
-</code></pre>
-
-
-<p>这样的话用textarea的value属性读取的时候就会遇到问题，双引号，大于小于号都会对value产生影响，导致传过去的有错误。  <br/>
-我记得好像有个类似的函数来用字符串传输html的，但函数名称想不起来了，只能用java的字符串替换函数将&#8221;替换为<code>&amp;quot;</code>，将&lt;>分别替换为<code>&amp;lt;</code>，<code>&amp;gt;</code>  <br/>
-然后就传输正确了。好惊险啊，这要是突然出了什么大bug，我就走不了了。。。  <br/>
-附上<a href="http://114.xixik.com/character/">转义字符表</a></p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
+<time datetime="2012-12-22T15:07:00+08:00" pubdate data-updated="true">Dec 22<span>nd</span>, 2012</time>
       
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/09/08/css-hack/">CSS Hack: 浏览器兼容性问题</a></h1>
-    
-    
-      <p class="meta">
-        
 
-
-
-
-
-
-
-
+<span class="categories">Category:
   
-
-
-<time datetime="2012-09-08T11:14:00+08:00" pubdate data-updated="true">Sep 8<span>th</span>, 2012</time>
-        
-         | <a href="/blog/2012/09/08/css-hack/#disqus_thread">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>直接看实例吧，下面的程序转载自: <a href="http://www.cnblogs.com/superc/archive/2012/03/11/2390652.html">Superc</a>和<a href="http://www.cnblogs.com/WuQiang/archive/2011/08/23/2150240.html">飘</a></p>
-
-<pre><code>"\9"　例:"margin:0px auto\9;".这里的"\9"可以区别所有IE和FireFox.
-"*"　IE6、IE7可以识别.IE8、FireFox不能.
-"_"　IE6可以识别"_",IE7、IE8、FireFox不能.
-如此,就可以完全区分开IE6、IE7、IE8、FireFox了.</code></pre>
-
-
-<p></p>
-
-<p>还是不知道怎么区分.好吧,来看个例子:</p>
-
-<script src="https://gist.github.com/3672021.js?file=gistfile1.txt"></script>
-
-
-<h2>    </h2>
-
-<p>还有这个例子也不错：</p>
-
-<script src="https://gist.github.com/3671558.js?file=gistfile1.html"></script>
-
-
-<p>   <br/>
-附上一张CSS Hack样式属性前缀表</p>
-
-<center>
-<img src="/images/css_hack.jpg">
-</center>
-
-</div>
+    <a class='category' href='/blog/categories/lua/'>Lua</a>
   
-  
+</span>
 
 
-    </article>
-  
-  
-    <article>
       
-  <header>
+
+
+    </p>
     
-      <h1 class="entry-title"><a href="/blog/2012/09/06/support-gallery/">向Octopress博客添加相册功能</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
+      <div class="sharing">
   
-
-
-<time datetime="2012-09-06T17:27:00+08:00" pubdate data-updated="true">Sep 6<span>th</span>, 2012</time>
-        
-         | <a href="/blog/2012/09/06/support-gallery/#disqus_thread">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>唉，今天又没干别的，调试了一整天的Octopress，老板我对不起你。。。 <br/>
-今天向我的博客添加了About Me页面和相册页面，这里主要说说相册功能是如何添加的。  <br/>
-对于Octopress这种轻量级的静态博客，没有必要将相册功能做的很完善，神马添加相册，上传照片功能啥的都本地手动添加就行了，这里的相册主要就是展示一下照片，而且在简洁素雅的前提下最好有一些酷酷的效果，这就是我的追求。  <br/>
-下午一直在找JS和Jquery的相册，试验了几个效果比较炫的，相册自带的css总是会和Octopress的css相冲突，导致切换到相册页面的时候整体排版就相当凌乱，在我很无助的时候，找到了这里：<a href="http://www.forceappx.com/blog/2011/12/28/getting-fancybox-to-play-nice-with-octopress/">appX</a>，这个文章主要讲的是如何将<a href="http://fancyapps.com/fancybox/#license">fancyBox</a>这个JQuery相册嵌入到Octopress日志中，给日志中的图片添加动态效果。在我试验他的方法之前，先试验了下fancyBox，效果出奇的让我满意，就是我要找的那种功能。  <br/>
-fancyBox主要用于在网页中展示相册，单击相片墙中的一个相片的时候，能够有淡入淡出的效果，且能自如的通过鼠标滚轮或者相片两侧的向上向下按钮浏览整个相册的内容。从<a href="http://fancyapps.com/fancybox/#license">fancyBox</a>下载之后运行一下Demo会有更好的理解。</p>
-
-<center>
-<img src="/images/support_gallery.JPG">
-</center>
-
-
-<p>“安装过程”大概是这样的，首先得在博客中添加一个相册的导航按钮，方法是修改</p>
-
-<pre><code>\source\_includes\custom\navigation.html    
-</code></pre>
-
-<p>仿造上面的添加一个相册页面的链接，比如这样：</p>
-
-<pre><code>&lt;li&gt;&lt;a href="/blog/gallery/demo"&gt;Gallery&lt;/a&gt;&lt;/li&gt;    
-</code></pre>
-
-<p>我这里偷懒了，直接在他的demo上建立的我的相册功能，这样很方便，而且完全能满足我要的功能。  <br/>
-添加了链接之后，将demo目录复制到<code>/source/blog/gallery/</code>目录下，当然，其他的目录比如<code>lib</code>、<code>source</code>目录也是必不可少的，这些里面包含了jquery和css等。别急，还得对<code>index.html</code>页面进行一下修改。如果不修改的话，这个相册就不能嵌入到网页当中，也就是说，单击相册链接之后，导航，边栏神马的就都不见了，所以得让Octopress将这个相册网页当成子页面，如下修改：将<code>&lt;html&gt;</code>、<code>&lt;body&gt;</code>、<code>&lt;head&gt;</code>等等独立页面拥有的元素统统去掉，然后在页面最开始部位添加</p>
-
-<pre><code>---
-layout: page
-title: Gallery
-footer: false
----</code></pre>
-
-
-<p>  <br/>
-这样Octopress就会认为这个页面是子网页。然后选择demo中自己喜欢的样式，剩余的该删就删吧，不要舍不得。。。  <br/>
-添加相片呢，就按照他的格式添加就好了，对了，每个相片还需一个缩略图。  <br/>
-嗯，大致就是这样吧，然后生成博客，就能看到相册功能了。  <br/>
-如果还有什么不明白的，可以在下面给我留言。</p>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://proudxu.github.com/blog/2012/12/22/lua-php-serialize/" data-via="" data-counturl="http://proudxu.github.com/blog/2012/12/22/lua-php-serialize/" >Tweet</a>
+  
+  
+  
 </div>
-  
-  
 
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2012/09/11/binary-tree-sort/" title="Previous Post: 二叉树排序">&laquo; 二叉树排序</a>
+      
+      
+    </p>
+  </footer>
+</article>
 
-    </article>
-  
-  <div class="pagination">
-    
-      <a class="prev" href="/blog/page/2/">&larr; Older</a>
-    
-    <a href="/blog/archives">Blog Archives</a>
-    
-  </div>
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 </div>
+  </section>
+
+</div>
+
 <aside class="sidebar">
   
     <section>
@@ -965,6 +775,7 @@ footer: false
   
 </aside>
 
+
     </div>
   </div>
   <footer role="contentinfo"><p>
@@ -979,7 +790,10 @@ footer: false
       var disqus_shortname = 'proudxu';
       
         
-        var disqus_script = 'count.js';
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://proudxu.github.com/blog/2012/12/22/lua-php-serialize/';
+        var disqus_url = 'http://proudxu.github.com/blog/2012/12/22/lua-php-serialize/';
+        var disqus_script = 'embed.js';
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
