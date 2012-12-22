@@ -4,7 +4,7 @@
   <title><![CDATA[Category: 算法 | 心静茹水]]></title>
   <link href="http://proudxu.github.com/blog/categories/算法/atom.xml" rel="self"/>
   <link href="http://proudxu.github.com/"/>
-  <updated>2012-12-22T15:17:35+08:00</updated>
+  <updated>2012-12-22T15:20:20+08:00</updated>
   <id>http://proudxu.github.com/</id>
   <author>
     <name><![CDATA[Zhao, Xuhai]]></name>
@@ -18,7 +18,97 @@
     <link href="http://proudxu.github.com/blog/2012/09/11/binary-tree-sort/"/>
     <updated>2012-09-11T09:02:00+08:00</updated>
     <id>http://proudxu.github.com/blog/2012/09/11/binary-tree-sort</id>
-    <content type="html"><![CDATA[<p>唉，在公司实习都呆傻了，现在写起C++的程序都这么费劲。早上试着写了个二叉树排序都花了半个多小时，这要是半年前的我。。。</p>
+    <content type="html"><![CDATA[<p>唉，在公司实习都呆傻了，现在写起C++的程序都这么费劲。早上试着写了个二叉树排序都花了半个多小时，这要是半年前的我。。。  <br/>
+``` c++</p>
+
+<h1>include <iostream></h1>
+
+<p>using namespace std;
+typedef struct Node
+{</p>
+
+<pre><code>int value;
+struct Node * left;
+struct Node * right;
+</code></pre>
+
+<p>}node;
+node * root=new node;
+void addToTree(node *current,int n)
+{</p>
+
+<pre><code>if(n &gt;= current-&gt;value)
+{
+    if(current-&gt;right==NULL)
+    {
+        node * r=new node;
+        current-&gt;right=r;
+        r-&gt;value=n;
+        r-&gt;left=NULL;
+        r-&gt;right=NULL;
+    }
+    else
+    {
+        addToTree(current-&gt;right, n);
+    }
+}
+else
+{
+    if(current-&gt;left==NULL)
+    {
+        node * l=new node;
+        current-&gt;left=l;
+        l-&gt;value=n;
+        l-&gt;left=NULL;
+        l-&gt;right=NULL;
+    }
+    else
+    {
+        addToTree(current-&gt;left, n);
+    }
+}
+</code></pre>
+
+<p>}</p>
+
+<p>void printTree(node * current)
+{</p>
+
+<pre><code>if(current==NULL)
+{
+    return ;
+}
+else
+{
+    printTree(current-&gt;left);
+    cout&lt;&lt;current-&gt;value&lt;&lt;endl;
+    printTree(current-&gt;right);
+}
+</code></pre>
+
+<p>}</p>
+
+<p>int main()
+{</p>
+
+<pre><code>root-&gt;value=13;
+root-&gt;left=NULL;
+root-&gt;right=NULL;
+addToTree(root,31);
+addToTree(root,11);
+addToTree(root,61);
+addToTree(root,23);
+addToTree(root,8);
+addToTree(root,18);
+addToTree(root,4);
+addToTree(root,2);
+addToTree(root,9);
+addToTree(root,6);
+printTree(root);
+</code></pre>
+
+<p>}
+```</p>
 
 <script src="https://gist.github.com/3695218.js?file=gistfile1.cpp"></script>
 
