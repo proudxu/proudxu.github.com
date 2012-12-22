@@ -4,7 +4,7 @@
   <title><![CDATA[心静茹水]]></title>
   <link href="http://proudxu.github.com/atom.xml" rel="self"/>
   <link href="http://proudxu.github.com/"/>
-  <updated>2012-12-22T15:16:32+08:00</updated>
+  <updated>2012-12-22T15:17:35+08:00</updated>
   <id>http://proudxu.github.com/</id>
   <author>
     <name><![CDATA[Zhao, Xuhai]]></name>
@@ -24,9 +24,9 @@
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>a:9:{s:10:"comment_id";s:1:"1";s:7:"user_id";s:7:"7082457";s:9:"user_name";
-</span><span class='line'>s:9:"putulbaby";s:11:"user_avatar";s:68:"http://avatar.bbs.miui.com/data/avatar/001/05/37/38_avatar_small.jpg";
-</span><span class='line'>s:15:"comment_content";s:63:"喜欢蓝色，就这么定了～～～～～～～～～～～";s:13:"comment_grade";s:1:"1";
+</pre></td><td class='code'><pre><code class=''><span class='line'>a:9:{s:10:"comment_id";s:1:"1";s:7:"user_id";s:7:"7082457";s:9:"user_name";s:9:"putulbaby";    
+</span><span class='line'>s:11:"user_avatar";s:68:"http://avatar.bbs.miui.com/data/avatar/001/05/37/38_avatar_small.jpg";       
+</span><span class='line'>s:15:"comment_content";s:63:"喜欢蓝色，就这么定了～～～～～～～～～～～";s:13:"comment_grade";s:1:"1";    
 </span><span class='line'>s:13:"average_grade";s:3:"5.0";s:6:"up_num";s:1:"0";s:13:"reply_content";s:0:"";}</span></code></pre></td></tr></table></div></figure>
 
 
