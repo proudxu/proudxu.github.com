@@ -9,7 +9,7 @@
   <meta name="author" content="Zhao, Xuhai">
 
   
-  <meta name="description" content="lua中使用结构体1
+  <meta name="description" content="1
 2
 3
 4
@@ -29,7 +29,7 @@
 18
 19
 local ffi = require(&quot;ffi&quot;)
-ffi.cdef[[ typedef struct { uint8_t id; char * name; } &hellip;">
+ffi.cdef[[ typedef struct { uint8_t id; char * name; } stuInfo &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -125,7 +125,7 @@ ffi.cdef[[ typedef struct { uint8_t id; char * name; } &hellip;">
   </header>
 
 
-  <div class="entry-content"><figure class='code'><figcaption><span>lua中使用结构体</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+  <div class="entry-content"><figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -168,21 +168,21 @@ ffi.cdef[[ typedef struct { uint8_t id; char * name; } &hellip;">
 
 <p>其中</p>
 
-<figure class='code'><figcaption><span>lua中使用结构体</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class='c'><span class='line'><span class="n">local</span> <span class="n">stu</span> <span class="o">=</span> <span class="n">ffi</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="s">&quot;stuInfo[?]&quot;</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
 <p>新建变长的结构体变量</p>
 
-<figure class='code'><figcaption><span>lua中使用结构体</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class='c'><span class='line'><span class="n">local</span> <span class="n">ptr</span><span class="o">=</span><span class="n">ffi</span><span class="p">.</span><span class="n">cast</span><span class="p">(</span><span class="s">&quot;char *&quot;</span><span class="p">,</span> <span class="n">name</span><span class="p">);</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
 <p>将lua中字符串转换为c的<code>char *</code></p>
 
-<figure class='code'><figcaption><span>lua中使用结构体</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class='c'><span class='line'><span class="n">local</span> <span class="n">myname</span> <span class="o">=</span> <span class="n">ffi</span><span class="p">.</span><span class="n">string</span><span class="p">(</span><span class="n">stu</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">name</span><span class="p">);</span>
 </span></code></pre></td></tr></table></div></figure>
 
