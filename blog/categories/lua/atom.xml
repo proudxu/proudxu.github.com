@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Lua | 心静茹水]]></title>
   <link href="http://proudxu.github.com/blog/categories/lua/atom.xml" rel="self"/>
   <link href="http://proudxu.github.com/"/>
-  <updated>2012-12-22T15:34:18+08:00</updated>
+  <updated>2012-12-24T18:34:36+08:00</updated>
   <id>http://proudxu.github.com/</id>
   <author>
     <name><![CDATA[Zhao, Xuhai]]></name>
@@ -12,6 +12,52 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Lua中通过ffi调用c的结构体变量]]></title>
+    <link href="http://proudxu.github.com/blog/2012/12/24/lua-struct/"/>
+    <updated>2012-12-24T18:08:00+08:00</updated>
+    <id>http://proudxu.github.com/blog/2012/12/24/lua-struct</id>
+    <content type="html"><![CDATA[<p>``` c lua中使用结构体
+local ffi = require("ffi")
+ffi.cdef[[
+   typedef struct {</p>
+
+<pre><code> uint8_t id;
+ char * name; 
+</code></pre>
+
+<p>   } stuInfo;
+]]
+local n = 1
+local stu = ffi.new("stuInfo[?]", n)
+for i=0, n-1 do
+   stu[i].id = 1;
+   local name = "zhao";
+   local ptr=ffi.cast("char *", name);
+   stu[i].name = ptr;
+end</p>
+
+<p>print(stu[0].id);
+local myname = ffi.string(stu[0].name);
+print(myname);
+```</p>
+
+<p>其中
+<code>
+local stu = ffi.new("stuInfo[?]", n)
+</code>
+新建变长的结构体变量
+<code>
+local ptr=ffi.cast("char *", name);
+</code>
+将lua中字符串转换为c的<code>char *</code>
+<code>
+local myname = ffi.string(stu[0].name);
+</code>
+将c中<code>char *</code>类型转换为lua的字符串</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Lua中实现php序列化及反序列化函数]]></title>
