@@ -166,6 +166,23 @@ ffi.cdef[[ typedef struct { uint8_t id; char * name; } stuInfo &hellip;">
 <p>其中</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='c'><span class='line'><span class="n">ffi</span><span class="p">.</span><span class="n">cdef</span><span class="p">[[</span>
+</span><span class='line'>   <span class="k">typedef</span> <span class="k">struct</span> <span class="p">{</span>
+</span><span class='line'>     <span class="kt">uint8_t</span> <span class="n">id</span><span class="p">;</span>
+</span><span class='line'>     <span class="kt">char</span> <span class="o">*</span> <span class="n">name</span><span class="p">;</span>
+</span><span class='line'>   <span class="p">}</span> <span class="n">stuInfo</span><span class="p">;</span>
+</span><span class='line'><span class="p">]]</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>表示新建一个结构体</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class='c'><span class='line'><span class="n">local</span> <span class="n">stu</span> <span class="o">=</span> <span class="n">ffi</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="s">&quot;stuInfo[?]&quot;</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
 </span></code></pre></td></tr></table></div></figure>
 
