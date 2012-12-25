@@ -4,7 +4,7 @@
   <title><![CDATA[心静茹水]]></title>
   <link href="http://proudxu.github.com/atom.xml" rel="self"/>
   <link href="http://proudxu.github.com/"/>
-  <updated>2012-12-25T10:13:29+08:00</updated>
+  <updated>2012-12-25T10:51:21+08:00</updated>
   <id>http://proudxu.github.com/</id>
   <author>
     <name><![CDATA[Zhao, Xuhai]]></name>
@@ -78,8 +78,10 @@
 
 <p>表示新建一个结构体</p>
 
-<pre><code>local stu = ffi.new("stuInfo[?]", n)
-</code></pre>
+<blockquote>
+local stu = ffi.new(&#8220;stuInfo[?]&#8221;, n)
+</blockquote>
+
 
 <p>新建变长的结构体变量</p>
 

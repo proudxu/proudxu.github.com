@@ -185,8 +185,10 @@ ffi.cdef[[ typedef struct { uint8_t id; char * name; } stuInfo &hellip;">
 
 <p>表示新建一个结构体</p>
 
-<pre><code>local stu = ffi.new("stuInfo[?]", n)
-</code></pre>
+<blockquote>
+local stu = ffi.new(&#8220;stuInfo[?]&#8221;, n)
+</blockquote>
+
 
 <p>新建变长的结构体变量</p>
 
