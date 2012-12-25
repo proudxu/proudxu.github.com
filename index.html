@@ -150,55 +150,21 @@ ffi.cdef[[ typedef struct { uint8_t id; char * name; } stuInfo &hellip;">
 </span><span class='line'>     <span class="kt">uint8_t</span> <span class="n">id</span><span class="p">;</span>
 </span><span class='line'>     <span class="kt">char</span> <span class="o">*</span> <span class="n">name</span><span class="p">;</span>
 </span><span class='line'>   <span class="p">}</span> <span class="n">stuInfo</span><span class="p">;</span>
-</span><span class='line'><span class="p">]]</span>
+</span><span class='line'><span class="p">]]</span><span class="o">--</span><span class="err">新建一个结构体</span>
 </span><span class='line'><span class="n">local</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">1</span>
-</span><span class='line'><span class="n">local</span> <span class="n">stu</span> <span class="o">=</span> <span class="n">ffi</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="s">&quot;stuInfo[?]&quot;</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
+</span><span class='line'><span class="n">local</span> <span class="n">stu</span> <span class="o">=</span> <span class="n">ffi</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="s">&quot;stuInfo[?]&quot;</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span><span class="o">--</span><span class="err">新建变长的结构体变量</span>
 </span><span class='line'><span class="k">for</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">n</span><span class="o">-</span><span class="mi">1</span> <span class="k">do</span>
 </span><span class='line'>   <span class="n">stu</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">id</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
 </span><span class='line'>   <span class="n">local</span> <span class="n">name</span> <span class="o">=</span> <span class="s">&quot;zhao&quot;</span><span class="p">;</span>
-</span><span class='line'>   <span class="n">local</span> <span class="n">ptr</span><span class="o">=</span><span class="n">ffi</span><span class="p">.</span><span class="n">cast</span><span class="p">(</span><span class="s">&quot;char *&quot;</span><span class="p">,</span> <span class="n">name</span><span class="p">);</span>
+</span><span class='line'>   <span class="n">local</span> <span class="n">ptr</span><span class="o">=</span><span class="n">ffi</span><span class="p">.</span><span class="n">cast</span><span class="p">(</span><span class="s">&quot;char *&quot;</span><span class="p">,</span> <span class="n">name</span><span class="p">);</span><span class="o">--</span><span class="err">将</span><span class="n">lua</span><span class="err">中字符串转换为</span><span class="n">c</span><span class="err">的`</span><span class="kt">char</span> <span class="o">*</span><span class="err">`</span>
 </span><span class='line'>   <span class="n">stu</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">name</span> <span class="o">=</span> <span class="n">ptr</span><span class="p">;</span>
 </span><span class='line'><span class="n">end</span>
 </span><span class='line'>
 </span><span class='line'><span class="n">print</span><span class="p">(</span><span class="n">stu</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">id</span><span class="p">);</span>
-</span><span class='line'><span class="n">local</span> <span class="n">myname</span> <span class="o">=</span> <span class="n">ffi</span><span class="p">.</span><span class="n">string</span><span class="p">(</span><span class="n">stu</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">name</span><span class="p">);</span>
+</span><span class='line'><span class="n">local</span> <span class="n">myname</span> <span class="o">=</span> <span class="n">ffi</span><span class="p">.</span><span class="n">string</span><span class="p">(</span><span class="n">stu</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">name</span><span class="p">);</span><span class="o">--</span><span class="err">将</span><span class="n">c</span><span class="err">中`</span><span class="kt">char</span> <span class="o">*</span><span class="err">`类型转换为</span><span class="n">lua</span><span class="err">的字符串</span>
 </span><span class='line'><span class="n">print</span><span class="p">(</span><span class="n">myname</span><span class="p">);</span>
 </span></code></pre></td></tr></table></div></figure>
 
-
-<p>其中</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class='c'><span class='line'><span class="n">ffi</span><span class="p">.</span><span class="n">cdef</span><span class="p">[[</span>
-</span><span class='line'>   <span class="k">typedef</span> <span class="k">struct</span> <span class="p">{</span>
-</span><span class='line'>     <span class="kt">uint8_t</span> <span class="n">id</span><span class="p">;</span>
-</span><span class='line'>     <span class="kt">char</span> <span class="o">*</span> <span class="n">name</span><span class="p">;</span>
-</span><span class='line'>   <span class="p">}</span> <span class="n">stuInfo</span><span class="p">;</span>
-</span><span class='line'><span class="p">]]</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>表示新建一个结构体</p>
-
-<blockquote>
-local stu = ffi.new(&#8220;stuInfo[?]&#8221;, n)
-</blockquote>
-
-
-<p>新建变长的结构体变量</p>
-
-<blockquote><p>local ptr=ffi.cast(&#8220;char *&#8221;, name);
-将lua中字符串转换为c的<code>char *</code></p>
-
-<pre><code>local myname = ffi.string(stu[0].name);    
-</code></pre>
-
-<p>将c中<code>char *</code>类型转换为lua的字符串</p></blockquote>
 </div>
   
   

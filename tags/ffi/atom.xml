@@ -4,7 +4,7 @@
   <title><![CDATA[Tag: ffi | 心静茹水]]></title>
   <link href="http://proudxu.github.com/tags/ffi/atom.xml" rel="self"/>
   <link href="http://proudxu.github.com/"/>
-  <updated>2012-12-25T10:52:31+08:00</updated>
+  <updated>2012-12-25T10:56:37+08:00</updated>
   <id>http://proudxu.github.com/</id>
   <author>
     <name><![CDATA[Zhao, Xuhai]]></name>
@@ -28,49 +28,20 @@ ffi.cdef[[
 </code></pre>
 
 <p>   } stuInfo;
-]]
+]]--新建一个结构体
 local n = 1
-local stu = ffi.new("stuInfo[?]", n)
+local stu = ffi.new("stuInfo[?]", n)--新建变长的结构体变量
 for i=0, n-1 do
    stu[i].id = 1;
    local name = "zhao";
-   local ptr=ffi.cast("char *", name);
+   local ptr=ffi.cast("char *", name);--将lua中字符串转换为c的<code>char *</code>
    stu[i].name = ptr;
 end</p>
 
 <p>print(stu[0].id);
-local myname = ffi.string(stu[0].name);
+local myname = ffi.string(stu[0].name);--将c中<code>char *</code>类型转换为lua的字符串
 print(myname);
 ```</p>
-
-<p>其中
-```
-ffi.cdef[[
-   typedef struct {</p>
-
-<pre><code> uint8_t id;
- char * name; 
-</code></pre>
-
-<p>   } stuInfo;
-]]
-```
-表示新建一个结构体</p>
-
-<blockquote>
-local stu = ffi.new("stuInfo[?]", n)
-</blockquote>
-
-
-<p>新建变长的结构体变量</p>
-
-<blockquote><p>local ptr=ffi.cast("char *", name);
-将lua中字符串转换为c的<code>char *</code></p>
-
-<pre><code>local myname = ffi.string(stu[0].name);    
-</code></pre>
-
-<p>将c中<code>char *</code>类型转换为lua的字符串</p></blockquote>
 ]]></content>
   </entry>
   
