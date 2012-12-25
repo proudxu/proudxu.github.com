@@ -141,25 +141,25 @@ ffi.cdef[[ typedef struct { uint8_t id; char * name; } stuInfo &hellip;">
 <span class='line-number'>17</span>
 <span class='line-number'>18</span>
 <span class='line-number'>19</span>
-</pre></td><td class='code'><pre><code class='c'><span class='line'><span class="n">local</span> <span class="n">ffi</span> <span class="o">=</span> <span class="n">require</span><span class="p">(</span><span class="s">&quot;ffi&quot;</span><span class="p">)</span>
-</span><span class='line'><span class="n">ffi</span><span class="p">.</span><span class="n">cdef</span><span class="p">[[</span>
-</span><span class='line'>   <span class="k">typedef</span> <span class="k">struct</span> <span class="p">{</span>
-</span><span class='line'>     <span class="kt">uint8_t</span> <span class="n">id</span><span class="p">;</span>
-</span><span class='line'>     <span class="kt">char</span> <span class="o">*</span> <span class="n">name</span><span class="p">;</span>
-</span><span class='line'>   <span class="p">}</span> <span class="n">stuInfo</span><span class="p">;</span>
-</span><span class='line'><span class="p">]]</span><span class="o">--</span><span class="err">新建一个结构体</span>
-</span><span class='line'><span class="n">local</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">1</span>
-</span><span class='line'><span class="n">local</span> <span class="n">stu</span> <span class="o">=</span> <span class="n">ffi</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="s">&quot;stuInfo[?]&quot;</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span><span class="o">--</span><span class="err">新建变长的结构体变量</span>
+</pre></td><td class='code'><pre><code class='lua'><span class='line'><span class="kd">local</span> <span class="n">ffi</span> <span class="o">=</span> <span class="nb">require</span><span class="p">(</span><span class="s2">&quot;</span><span class="s">ffi&quot;</span><span class="p">)</span>
+</span><span class='line'><span class="n">ffi</span><span class="p">.</span><span class="n">cdef</span><span class="s">[[</span>
+</span><span class='line'><span class="s">   typedef struct { </span>
+</span><span class='line'><span class="s">     uint8_t id;</span>
+</span><span class='line'><span class="s">     char * name; </span>
+</span><span class='line'><span class="s">   } stuInfo;</span>
+</span><span class='line'><span class="s">]]</span><span class="c1">--新建一个结构体</span>
+</span><span class='line'><span class="kd">local</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">1</span>
+</span><span class='line'><span class="kd">local</span> <span class="n">stu</span> <span class="o">=</span> <span class="n">ffi</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="s2">&quot;</span><span class="s">stuInfo[?]&quot;</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span><span class="c1">--新建变长的结构体变量</span>
 </span><span class='line'><span class="k">for</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">n</span><span class="o">-</span><span class="mi">1</span> <span class="k">do</span>
 </span><span class='line'>   <span class="n">stu</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">id</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
-</span><span class='line'>   <span class="n">local</span> <span class="n">name</span> <span class="o">=</span> <span class="s">&quot;zhao&quot;</span><span class="p">;</span>
-</span><span class='line'>   <span class="n">local</span> <span class="n">ptr</span><span class="o">=</span><span class="n">ffi</span><span class="p">.</span><span class="n">cast</span><span class="p">(</span><span class="s">&quot;char *&quot;</span><span class="p">,</span> <span class="n">name</span><span class="p">);</span><span class="o">--</span><span class="err">将</span><span class="n">lua</span><span class="err">中字符串转换为</span><span class="n">c</span><span class="err">的`</span><span class="kt">char</span> <span class="o">*</span><span class="err">`</span>
+</span><span class='line'>   <span class="kd">local</span> <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="s">zhao&quot;</span><span class="p">;</span>
+</span><span class='line'>   <span class="kd">local</span> <span class="n">ptr</span><span class="o">=</span><span class="n">ffi</span><span class="p">.</span><span class="n">cast</span><span class="p">(</span><span class="s2">&quot;</span><span class="s">char *&quot;</span><span class="p">,</span> <span class="n">name</span><span class="p">);</span><span class="c1">--将lua中字符串转换为c的`char *`</span>
 </span><span class='line'>   <span class="n">stu</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">name</span> <span class="o">=</span> <span class="n">ptr</span><span class="p">;</span>
-</span><span class='line'><span class="n">end</span>
+</span><span class='line'><span class="k">end</span>
 </span><span class='line'>
-</span><span class='line'><span class="n">print</span><span class="p">(</span><span class="n">stu</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">id</span><span class="p">);</span>
-</span><span class='line'><span class="n">local</span> <span class="n">myname</span> <span class="o">=</span> <span class="n">ffi</span><span class="p">.</span><span class="n">string</span><span class="p">(</span><span class="n">stu</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">name</span><span class="p">);</span><span class="o">--</span><span class="err">将</span><span class="n">c</span><span class="err">中`</span><span class="kt">char</span> <span class="o">*</span><span class="err">`类型转换为</span><span class="n">lua</span><span class="err">的字符串</span>
-</span><span class='line'><span class="n">print</span><span class="p">(</span><span class="n">myname</span><span class="p">);</span>
+</span><span class='line'><span class="nb">print</span><span class="p">(</span><span class="n">stu</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">id</span><span class="p">);</span>
+</span><span class='line'><span class="kd">local</span> <span class="n">myname</span> <span class="o">=</span> <span class="n">ffi</span><span class="p">.</span><span class="n">string</span><span class="p">(</span><span class="n">stu</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">name</span><span class="p">);</span><span class="c1">--将c中`char *`类型转换为lua的字符串</span>
+</span><span class='line'><span class="nb">print</span><span class="p">(</span><span class="n">myname</span><span class="p">);</span>
 </span></code></pre></td></tr></table></div></figure>
 
 </div>
