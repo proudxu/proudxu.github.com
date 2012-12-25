@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Lua | 心静茹水]]></title>
   <link href="http://proudxu.github.com/blog/categories/lua/atom.xml" rel="self"/>
   <link href="http://proudxu.github.com/"/>
-  <updated>2012-12-25T10:51:21+08:00</updated>
+  <updated>2012-12-25T10:52:31+08:00</updated>
   <id>http://proudxu.github.com/</id>
   <author>
     <name><![CDATA[Zhao, Xuhai]]></name>
@@ -64,15 +64,13 @@ local stu = ffi.new("stuInfo[?]", n)
 
 <p>新建变长的结构体变量</p>
 
-<pre><code>local ptr=ffi.cast("char *", name);
-</code></pre>
-
-<p>将lua中字符串转换为c的<code>char *</code></p>
+<blockquote><p>local ptr=ffi.cast("char *", name);
+将lua中字符串转换为c的<code>char *</code></p>
 
 <pre><code>local myname = ffi.string(stu[0].name);    
 </code></pre>
 
-<p>将c中<code>char *</code>类型转换为lua的字符串</p>
+<p>将c中<code>char *</code>类型转换为lua的字符串</p></blockquote>
 ]]></content>
   </entry>
   
