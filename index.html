@@ -185,24 +185,18 @@ ffi.cdef[[ typedef struct { uint8_t id; char * name; } stuInfo &hellip;">
 
 <p>表示新建一个结构体</p>
 
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='c'><span class='line'><span class="n">local</span> <span class="n">stu</span> <span class="o">=</span> <span class="n">ffi</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="s">&quot;stuInfo[?]&quot;</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
-</span></code></pre></td></tr></table></div></figure>
-
+<pre><code>local stu = ffi.new("stuInfo[?]", n)
+</code></pre>
 
 <p>新建变长的结构体变量</p>
 
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='c'><span class='line'><span class="n">local</span> <span class="n">ptr</span><span class="o">=</span><span class="n">ffi</span><span class="p">.</span><span class="n">cast</span><span class="p">(</span><span class="s">&quot;char *&quot;</span><span class="p">,</span> <span class="n">name</span><span class="p">);</span>
-</span></code></pre></td></tr></table></div></figure>
-
+<pre><code>local ptr=ffi.cast("char *", name);
+</code></pre>
 
 <p>将lua中字符串转换为c的<code>char *</code></p>
 
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='c'><span class='line'><span class="n">local</span> <span class="n">myname</span> <span class="o">=</span> <span class="n">ffi</span><span class="p">.</span><span class="n">string</span><span class="p">(</span><span class="n">stu</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">name</span><span class="p">);</span>
-</span></code></pre></td></tr></table></div></figure>
-
+<pre><code>local myname = ffi.string(stu[0].name);    
+</code></pre>
 
 <p>将c中<code>char *</code>类型转换为lua的字符串</p>
 </div>
