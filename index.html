@@ -9,7 +9,7 @@
   <meta name="author" content="Zhao, Xuhai">
 
   
-  <meta name="description" content="1
+  <meta name="description" content="Yaf框架在nginx虚拟主机中的配置1
 2
 3
 4
@@ -28,8 +28,30 @@
 17
 18
 19
-local ffi = require(&quot;ffi&quot;)
-ffi.cdef[[ typedef struct { uint8_t id; char * name; } stuInfo &hellip;">
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+server
+{ listen &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -82,6 +104,127 @@ ffi.cdef[[ typedef struct { uint8_t id; char * name; } stuInfo &hellip;">
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/01/14/yaf-nginx/">Yaf Nginx</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-01-14T20:19:00+08:00" pubdate data-updated="true">Jan 14<span>th</span>, 2013</time>
+        
+         | <a href="/blog/2013/01/14/yaf-nginx/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><figure class='code'><figcaption><span>Yaf框架在nginx虚拟主机中的配置</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+</pre></td><td class='code'><pre><code class='lua'><span class='line'><span class="n">server</span>
+</span><span class='line'><span class="p">{</span>
+</span><span class='line'>        <span class="n">listen</span>       <span class="mi">80</span><span class="p">;</span>
+</span><span class='line'>        <span class="n">server_name</span> <span class="n">demo</span><span class="p">.</span><span class="n">yafphp</span><span class="p">.</span><span class="n">com</span><span class="p">;</span>
+</span><span class='line'>        <span class="n">index</span> <span class="n">index</span><span class="p">.</span><span class="n">html</span> <span class="n">index</span><span class="p">.</span><span class="n">htm</span> <span class="n">index</span><span class="p">.</span><span class="n">php</span><span class="p">;</span>
+</span><span class='line'>        <span class="n">root</span>  <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">wwwroot</span><span class="o">/</span><span class="n">demo</span><span class="p">.</span><span class="n">yafphp</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">public</span><span class="o">/</span><span class="p">;</span>
+</span><span class='line'>        <span class="n">error_log</span> <span class="o">/</span><span class="n">data</span><span class="o">/</span><span class="n">order8</span><span class="p">.</span><span class="n">log</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'>        <span class="n">location</span> <span class="o">/</span> <span class="p">{</span>
+</span><span class='line'>                 <span class="k">if</span> <span class="p">(</span><span class="err">!</span><span class="o">-</span><span class="n">e</span> <span class="err">$</span><span class="n">request_filename</span><span class="p">){</span>
+</span><span class='line'>                        <span class="n">rewrite</span> <span class="o">^/</span><span class="p">(.</span><span class="o">*</span><span class="p">)</span> <span class="o">/</span><span class="n">index</span><span class="p">.</span><span class="n">php</span><span class="o">/</span><span class="err">$</span><span class="mi">1</span> <span class="n">last</span><span class="p">;</span>
+</span><span class='line'>                        <span class="o">#</span><span class="k">break</span><span class="p">;</span>
+</span><span class='line'>                 <span class="p">}</span>
+</span><span class='line'>        <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'>        <span class="n">location</span> <span class="err">~</span> <span class="err">\</span><span class="p">.</span><span class="n">php</span><span class="err">$</span>
+</span><span class='line'>        <span class="p">{</span>
+</span><span class='line'>                <span class="n">fastcgi_pass</span>  <span class="n">unix</span><span class="p">:</span><span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">php</span><span class="o">-</span><span class="n">cgi</span><span class="p">.</span><span class="n">sock</span><span class="p">;</span>
+</span><span class='line'>                <span class="n">fastcgi_index</span> <span class="n">index</span><span class="p">.</span><span class="n">php</span><span class="p">;</span>
+</span><span class='line'>                <span class="n">include</span> <span class="n">fastcgi_params</span><span class="p">;</span>
+</span><span class='line'>                <span class="n">fastcgi_param</span> <span class="n">SCRIPT_FILENAME</span> <span class="err">$</span><span class="n">document_root</span><span class="err">$</span><span class="n">fastcgi_script_name</span><span class="p">;</span>
+</span><span class='line'>                <span class="n">fastcgi_param</span> <span class="n">PATH_INFO</span> <span class="err">$</span><span class="n">fastcgi_script_name</span><span class="p">;</span>
+</span><span class='line'>        <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>        <span class="n">location</span> <span class="o">/</span><span class="n">status</span> <span class="p">{</span>
+</span><span class='line'>                <span class="n">stub_status</span> <span class="n">on</span><span class="p">;</span>
+</span><span class='line'>                <span class="n">access_log</span>   <span class="n">off</span><span class="p">;</span>
+</span><span class='line'>        <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>        <span class="n">location</span> <span class="err">~</span> <span class="p">.</span><span class="o">*</span><span class="err">\</span><span class="p">.(</span><span class="n">gif</span><span class="err">|</span><span class="n">jpg</span><span class="err">|</span><span class="n">jpeg</span><span class="err">|</span><span class="n">png</span><span class="err">|</span><span class="n">bmp</span><span class="err">|</span><span class="n">swf</span><span class="p">)</span><span class="err">$</span>
+</span><span class='line'>                <span class="p">{</span>
+</span><span class='line'>                        <span class="n">expires</span>      <span class="mi">30</span><span class="n">d</span><span class="p">;</span>
+</span><span class='line'>                <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>        <span class="n">location</span> <span class="err">~</span> <span class="p">.</span><span class="o">*</span><span class="err">\</span><span class="p">.(</span><span class="n">js</span><span class="err">|</span><span class="n">css</span><span class="p">)</span><span class="err">?$</span>
+</span><span class='line'>                <span class="p">{</span>
+</span><span class='line'>                        <span class="n">expires</span>      <span class="mi">12</span><span class="n">h</span><span class="p">;</span>
+</span><span class='line'>                <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -985,195 +1128,6 @@ ffi.cdef[[ typedef struct { uint8_t id; char * name; } stuInfo &hellip;">
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/09/08/css-hack/">CSS Hack: 浏览器兼容性问题</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-09-08T11:14:00+08:00" pubdate data-updated="true">Sep 8<span>th</span>, 2012</time>
-        
-         | <a href="/blog/2012/09/08/css-hack/#disqus_thread">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>直接看实例吧，下面的程序转载自: <a href="http://www.cnblogs.com/superc/archive/2012/03/11/2390652.html">Superc</a>和<a href="http://www.cnblogs.com/WuQiang/archive/2011/08/23/2150240.html">飘</a></p>
-
-<pre><code>"\9"　例:"margin:0px auto\9;".这里的"\9"可以区别所有IE和FireFox.
-"*"　IE6、IE7可以识别.IE8、FireFox不能.
-"_"　IE6可以识别"_",IE7、IE8、FireFox不能.
-如此,就可以完全区分开IE6、IE7、IE8、FireFox了.</code></pre>
-
-
-<p></p>
-
-<p>还是不知道怎么区分.好吧,来看个例子:</p>
-
-<figure class='code'><figcaption><span>Example 1</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-<span class='line-number'>24</span>
-<span class='line-number'>25</span>
-<span class='line-number'>26</span>
-<span class='line-number'>27</span>
-<span class='line-number'>28</span>
-<span class='line-number'>29</span>
-<span class='line-number'>30</span>
-<span class='line-number'>31</span>
-<span class='line-number'>32</span>
-<span class='line-number'>33</span>
-<span class='line-number'>34</span>
-<span class='line-number'>35</span>
-<span class='line-number'>36</span>
-<span class='line-number'>37</span>
-</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="cp">&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Transitional//EN&quot; &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;</span>
-</span><span class='line'><span class="nt">&lt;html</span> <span class="na">xmlns=</span><span class="s">&quot;http://www.w3.org/1999/xhtml&quot;</span><span class="nt">&gt;</span>
-</span><span class='line'>    <span class="nt">&lt;head&gt;</span>
-</span><span class='line'>    <span class="nt">&lt;meta</span> <span class="na">http-equiv=</span><span class="s">&quot;Content-Type&quot;</span> <span class="na">content=</span><span class="s">&quot;text/html; charset=utf-8&quot;</span> <span class="nt">/&gt;</span>
-</span><span class='line'>    <span class="nt">&lt;title&gt;</span>区别IE6、IE7、IE8、FireFox的CSS hack - http://www.52css.com%3c/title&gt;
-</span><span class='line'>    <span class="nt">&lt;style </span><span class="na">type=</span><span class="s">&quot;text/css&quot;</span><span class="nt">&gt;</span>
-</span><span class='line'>    <span class="o">&lt;!</span><span class="nt">--</span>
-</span><span class='line'>    <span class="nf">#test</span><span class="o">,</span><span class="nf">#note</span><span class="p">{</span>
-</span><span class='line'>        <span class="k">margin</span><span class="o">:</span><span class="m">0</span> <span class="k">auto</span><span class="p">;</span>
-</span><span class='line'>        <span class="k">text-align</span><span class="o">:</span><span class="k">center</span><span class="p">;</span>
-</span><span class='line'>    <span class="p">}</span>
-</span><span class='line'>    <span class="nf">#test</span> <span class="p">{</span>
-</span><span class='line'>        <span class="k">width</span><span class="o">:</span><span class="m">200px</span><span class="p">;</span>
-</span><span class='line'>        <span class="k">height</span><span class="o">:</span><span class="m">30px</span><span class="p">;</span>
-</span><span class='line'>        <span class="k">border</span><span class="o">:</span> <span class="m">1px</span> <span class="k">solid</span> <span class="m">#000000</span><span class="p">;</span>
-</span><span class='line'>        <span class="k">color</span><span class="o">:</span><span class="m">#fff</span><span class="p">;</span>
-</span><span class='line'>      <span class="k">line-height</span><span class="o">:</span><span class="m">30px</span><span class="p">;</span>
-</span><span class='line'>  <span class="p">}</span>
-</span><span class='line'>  <span class="nc">.color</span><span class="p">{</span>
-</span><span class='line'>      <span class="k">background-color</span><span class="o">:</span> <span class="m">#CC00FF</span><span class="p">;</span>        <span class="c">/*所有浏览器都会显示为紫色*/</span>
-</span><span class='line'>      <span class="k">background-color</span><span class="o">:</span> <span class="m">#FF0000</span><span class="err">\</span><span class="m">9</span><span class="p">;</span>    <span class="c">/*IE6、IE7、IE8会显示红色*/</span>
-</span><span class='line'>      <span class="o">*</span><span class="k">background-color</span><span class="o">:</span> <span class="m">#0066FF</span><span class="p">;</span>        <span class="c">/*IE6、IE7会变为蓝色*/</span>
-</span><span class='line'>      <span class="n">_background</span><span class="o">-</span><span class="k">color</span><span class="o">:</span> <span class="m">#009933</span><span class="p">;</span>        <span class="c">/*IE6会变为绿色*/</span>
-</span><span class='line'>  <span class="p">}</span>
-</span><span class='line'>  <span class="nt">--</span><span class="o">&gt;</span>
-</span><span class='line'>  <span class="nt">&lt;/style&gt;</span>
-</span><span class='line'><span class="nt">&lt;/head&gt;</span>
-</span><span class='line'><span class="nt">&lt;body&gt;</span>
-</span><span class='line'>  <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;test&quot;</span> <span class="na">class=</span><span class="s">&quot;color&quot;</span><span class="nt">&gt;</span>测试方块 www.mycsu.net <span class="nt">&lt;/div&gt;</span>
-</span><span class='line'>  <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;note&quot;</span><span class="nt">&gt;</span>
-</span><span class='line'>      <span class="nt">&lt;strong</span> <span class="na">style=</span><span class="s">&quot;color:#009933&quot;</span><span class="nt">&gt;</span>IE6<span class="nt">&lt;/strong&gt;</span>
-</span><span class='line'>      <span class="nt">&lt;strong</span> <span class="na">style=</span><span class="s">&quot;color:#0066FF&quot;</span><span class="nt">&gt;</span>IE7<span class="nt">&lt;/strong&gt;</span>
-</span><span class='line'>      <span class="nt">&lt;strong</span> <span class="na">style=</span><span class="s">&quot;color:#FF0000&quot;</span><span class="nt">&gt;</span>IE8<span class="nt">&lt;/strong&gt;</span>
-</span><span class='line'>      <span class="nt">&lt;strong</span> <span class="na">style=</span><span class="s">&quot;color:#CC00FF&quot;</span><span class="nt">&gt;</span>FireFox<span class="nt">&lt;/strong&gt;</span>
-</span><span class='line'>  <span class="nt">&lt;/div&gt;</span>
-</span><span class='line'><span class="nt">&lt;/body&gt;</span>
-</span><span class='line'><span class="nt">&lt;/html&gt;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<hr />
-
-<p>还有这个例子也不错：</p>
-
-<figure class='code'><figcaption><span>Example 2</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-<span class='line-number'>24</span>
-<span class='line-number'>25</span>
-</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="cp">&lt;!DOCTYPE html&gt;</span>
-</span><span class='line'><span class="nt">&lt;html&gt;</span>
-</span><span class='line'><span class="nt">&lt;head&gt;</span>
-</span><span class='line'>    <span class="nt">&lt;title&gt;</span>Css Hack<span class="nt">&lt;/title&gt;</span>
-</span><span class='line'>    <span class="nt">&lt;style&gt;</span>
-</span><span class='line'>    <span class="nf">#test</span>
-</span><span class='line'>    <span class="p">{</span>
-</span><span class='line'>        <span class="k">width</span><span class="o">:</span><span class="m">300px</span><span class="p">;</span>
-</span><span class='line'>        <span class="k">height</span><span class="o">:</span><span class="m">300px</span><span class="p">;</span>
-</span><span class='line'>
-</span><span class='line'>        <span class="k">background-color</span><span class="o">:</span><span class="nb">blue</span><span class="p">;</span>      <span class="c">/*firefox*/</span>
-</span><span class='line'>        <span class="k">background-color</span><span class="o">:</span><span class="nb">red</span><span class="err">\</span><span class="m">9</span><span class="p">;</span>      <span class="c">/*all ie*/</span>
-</span><span class='line'>        <span class="k">background-color</span><span class="o">:</span><span class="nb">yellow</span><span class="err">\</span><span class="m">0</span><span class="p">;</span>    <span class="c">/*ie8*/</span>
-</span><span class='line'>        <span class="o">+</span><span class="k">background-color</span><span class="o">:</span><span class="nb">pink</span><span class="p">;</span>        <span class="c">/*ie7*/</span>
-</span><span class='line'>        <span class="n">_background</span><span class="o">-</span><span class="k">color</span><span class="o">:</span><span class="nb">orange</span><span class="p">;</span>       <span class="c">/*ie6*/</span>
-</span><span class='line'>    <span class="p">}</span>
-</span><span class='line'>    <span class="nd">:root</span> <span class="nf">#test</span> <span class="p">{</span> <span class="k">background-color</span><span class="o">:</span><span class="nb">purple</span><span class="err">\</span><span class="m">9</span><span class="p">;</span> <span class="p">}</span>  <span class="c">/*ie9*/</span>
-</span><span class='line'>    <span class="k">@media</span> <span class="nt">all</span> <span class="nt">and</span> <span class="o">(</span><span class="nt">min-width</span><span class="nd">:0px</span><span class="o">)</span><span class="p">{</span> <span class="nf">#test</span> <span class="p">{</span><span class="k">background-color</span><span class="o">:</span><span class="nb">black</span><span class="err">\</span><span class="m">0</span><span class="p">;}</span> <span class="p">}</span>  <span class="c">/*opera*/</span>
-</span><span class='line'>    <span class="k">@media</span> <span class="nt">screen</span> <span class="nt">and</span> <span class="o">(</span><span class="nt">-webkit-min-device-pixel-ratio</span><span class="nd">:0</span><span class="o">)</span><span class="p">{</span> <span class="nf">#test</span> <span class="p">{</span><span class="k">background-color</span><span class="o">:</span><span class="nb">gray</span><span class="p">;}</span> <span class="p">}</span>  <span class="c">/*chrome and safari*/</span>
-</span><span class='line'>    <span class="nt">&lt;/style&gt;</span>
-</span><span class='line'><span class="nt">&lt;/head&gt;</span>
-</span><span class='line'><span class="nt">&lt;body&gt;</span>
-</span><span class='line'>    <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;test&quot;</span><span class="nt">&gt;</span>test<span class="nt">&lt;/div&gt;</span>
-</span><span class='line'><span class="nt">&lt;/body&gt;</span>
-</span><span class='line'><span class="nt">&lt;/html&gt;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>附上一张CSS Hack样式属性前缀表</p>
-
-<center>
-<img src="/images/css_hack.jpg">
-</center>
-
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/2/">&larr; Older</a>
@@ -1189,6 +1143,7 @@ ffi.cdef[[ typedef struct { uint8_t id; char * name; } stuInfo &hellip;">
   <ul id="categories">
     <li class='category'><a href='/blog/categories/c语言/'>C语言 (1)</a></li>
 <li class='category'><a href='/blog/categories/lua/'>Lua (2)</a></li>
+<li class='category'><a href='/blog/categories/php/'>PHP (1)</a></li>
 <li class='category'><a href='/blog/categories/octopress/'>octopress (4)</a></li>
 <li class='category'><a href='/blog/categories/web前端/'>web前端 (2)</a></li>
 <li class='category'><a href='/blog/categories/实习生活/'>实习生活 (1)</a></li>
@@ -1199,6 +1154,10 @@ ffi.cdef[[ typedef struct { uint8_t id; char * name; } stuInfo &hellip;">
 </section><section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2013/01/14/yaf-nginx/">yaf nginx</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2012/12/24/lua-struct/">Lua中通过ffi调用c的结构体变量</a>
@@ -1234,10 +1193,6 @@ ffi.cdef[[ typedef struct { uint8_t id; char * name; } stuInfo &hellip;">
     
       <li class="post">
         <a href="/blog/2012/09/03/config-comment-on-octopress/">给octopress添加Disqus评论功能</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/09/03/blogging-like-a-hacker/">Blogging Like a Hacker</a>
       </li>
     
   </ul>

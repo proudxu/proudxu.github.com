@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Tag: yaf | 心静茹水]]></title>
+  <link href="http://proudxu.github.com/tags/yaf/atom.xml" rel="self"/>
+  <link href="http://proudxu.github.com/"/>
+  <updated>2013-01-14T20:23:08+08:00</updated>
+  <id>http://proudxu.github.com/</id>
+  <author>
+    <name><![CDATA[Zhao, Xuhai]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[yaf nginx]]></title>
+    <link href="http://proudxu.github.com/blog/2013/01/14/yaf-nginx/"/>
+    <updated>2013-01-14T20:19:00+08:00</updated>
+    <id>http://proudxu.github.com/blog/2013/01/14/yaf-nginx</id>
+    <content type="html"><![CDATA[<p>``` lua Yaf框架在nginx虚拟主机中的配置
+server
+{</p>
+
+<pre><code>    listen       80;
+    server_name demo.yafphp.com;
+    index index.html index.htm index.php;
+    root  /home/wwwroot/demo.yafphp.com/public/;
+    error_log /data/order8.log;
+
+    location / {
+             if (!-e $request_filename){
+                    rewrite ^/(.*) /index.php/$1 last;
+                    #break;
+             }
+    }
+
+
+    location ~ \.php$
+    {
+            fastcgi_pass  unix:/tmp/php-cgi.sock;
+            fastcgi_index index.php;
+            include fastcgi_params;
+            fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+            fastcgi_param PATH_INFO $fastcgi_script_name;
+    }
+
+    location /status {
+            stub_status on;
+            access_log   off;
+    }
+
+    location ~ .*\.(gif|jpg|jpeg|png|bmp|swf)$
+            {
+                    expires      30d;
+            }
+
+    location ~ .*\.(js|css)?$
+            {
+                    expires      12h;
+            }
+</code></pre>
+
+<p>}
+```</p>
+]]></content>
+  </entry>
+  
+</feed>

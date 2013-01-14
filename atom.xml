@@ -4,7 +4,7 @@
   <title><![CDATA[心静茹水]]></title>
   <link href="http://proudxu.github.com/atom.xml" rel="self"/>
   <link href="http://proudxu.github.com/"/>
-  <updated>2013-01-11T10:56:25+08:00</updated>
+  <updated>2013-01-14T20:23:08+08:00</updated>
   <id>http://proudxu.github.com/</id>
   <author>
     <name><![CDATA[Zhao, Xuhai]]></name>
@@ -12,6 +12,98 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[yaf nginx]]></title>
+    <link href="http://proudxu.github.com/blog/2013/01/14/yaf-nginx/"/>
+    <updated>2013-01-14T20:19:00+08:00</updated>
+    <id>http://proudxu.github.com/blog/2013/01/14/yaf-nginx</id>
+    <content type="html"><![CDATA[<figure class='code'><figcaption><span>Yaf框架在nginx虚拟主机中的配置</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+</pre></td><td class='code'><pre><code class='lua'><span class='line'><span class="n">server</span>
+</span><span class='line'><span class="p">{</span>
+</span><span class='line'>        <span class="n">listen</span>       <span class="mi">80</span><span class="p">;</span>
+</span><span class='line'>        <span class="n">server_name</span> <span class="n">demo</span><span class="p">.</span><span class="n">yafphp</span><span class="p">.</span><span class="n">com</span><span class="p">;</span>
+</span><span class='line'>        <span class="n">index</span> <span class="n">index</span><span class="p">.</span><span class="n">html</span> <span class="n">index</span><span class="p">.</span><span class="n">htm</span> <span class="n">index</span><span class="p">.</span><span class="n">php</span><span class="p">;</span>
+</span><span class='line'>        <span class="n">root</span>  <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">wwwroot</span><span class="o">/</span><span class="n">demo</span><span class="p">.</span><span class="n">yafphp</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">public</span><span class="o">/</span><span class="p">;</span>
+</span><span class='line'>        <span class="n">error_log</span> <span class="o">/</span><span class="n">data</span><span class="o">/</span><span class="n">order8</span><span class="p">.</span><span class="n">log</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'>        <span class="n">location</span> <span class="o">/</span> <span class="p">{</span>
+</span><span class='line'>                 <span class="k">if</span> <span class="p">(</span><span class="err">!</span><span class="o">-</span><span class="n">e</span> <span class="err">$</span><span class="n">request_filename</span><span class="p">){</span>
+</span><span class='line'>                        <span class="n">rewrite</span> <span class="o">^/</span><span class="p">(.</span><span class="o">*</span><span class="p">)</span> <span class="o">/</span><span class="n">index</span><span class="p">.</span><span class="n">php</span><span class="o">/</span><span class="err">$</span><span class="mi">1</span> <span class="n">last</span><span class="p">;</span>
+</span><span class='line'>                        <span class="o">#</span><span class="k">break</span><span class="p">;</span>
+</span><span class='line'>                 <span class="p">}</span>
+</span><span class='line'>        <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'>        <span class="n">location</span> <span class="err">~</span> <span class="err">\</span><span class="p">.</span><span class="n">php</span><span class="err">$</span>
+</span><span class='line'>        <span class="p">{</span>
+</span><span class='line'>                <span class="n">fastcgi_pass</span>  <span class="n">unix</span><span class="p">:</span><span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">php</span><span class="o">-</span><span class="n">cgi</span><span class="p">.</span><span class="n">sock</span><span class="p">;</span>
+</span><span class='line'>                <span class="n">fastcgi_index</span> <span class="n">index</span><span class="p">.</span><span class="n">php</span><span class="p">;</span>
+</span><span class='line'>                <span class="n">include</span> <span class="n">fastcgi_params</span><span class="p">;</span>
+</span><span class='line'>                <span class="n">fastcgi_param</span> <span class="n">SCRIPT_FILENAME</span> <span class="err">$</span><span class="n">document_root</span><span class="err">$</span><span class="n">fastcgi_script_name</span><span class="p">;</span>
+</span><span class='line'>                <span class="n">fastcgi_param</span> <span class="n">PATH_INFO</span> <span class="err">$</span><span class="n">fastcgi_script_name</span><span class="p">;</span>
+</span><span class='line'>        <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>        <span class="n">location</span> <span class="o">/</span><span class="n">status</span> <span class="p">{</span>
+</span><span class='line'>                <span class="n">stub_status</span> <span class="n">on</span><span class="p">;</span>
+</span><span class='line'>                <span class="n">access_log</span>   <span class="n">off</span><span class="p">;</span>
+</span><span class='line'>        <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>        <span class="n">location</span> <span class="err">~</span> <span class="p">.</span><span class="o">*</span><span class="err">\</span><span class="p">.(</span><span class="n">gif</span><span class="err">|</span><span class="n">jpg</span><span class="err">|</span><span class="n">jpeg</span><span class="err">|</span><span class="n">png</span><span class="err">|</span><span class="n">bmp</span><span class="err">|</span><span class="n">swf</span><span class="p">)</span><span class="err">$</span>
+</span><span class='line'>                <span class="p">{</span>
+</span><span class='line'>                        <span class="n">expires</span>      <span class="mi">30</span><span class="n">d</span><span class="p">;</span>
+</span><span class='line'>                <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>        <span class="n">location</span> <span class="err">~</span> <span class="p">.</span><span class="o">*</span><span class="err">\</span><span class="p">.(</span><span class="n">js</span><span class="err">|</span><span class="n">css</span><span class="p">)</span><span class="err">?$</span>
+</span><span class='line'>                <span class="p">{</span>
+</span><span class='line'>                        <span class="n">expires</span>      <span class="mi">12</span><span class="n">h</span><span class="p">;</span>
+</span><span class='line'>                <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Lua中通过ffi调用c的结构体变量]]></title>
