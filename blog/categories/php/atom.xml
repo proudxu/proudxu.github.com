@@ -4,7 +4,7 @@
   <title><![CDATA[Category: PHP | 心静茹水]]></title>
   <link href="http://proudxu.github.com/blog/categories/php/atom.xml" rel="self"/>
   <link href="http://proudxu.github.com/"/>
-  <updated>2013-01-14T20:25:59+08:00</updated>
+  <updated>2013-01-14T20:27:07+08:00</updated>
   <id>http://proudxu.github.com/</id>
   <author>
     <name><![CDATA[Zhao, Xuhai]]></name>
@@ -14,7 +14,7 @@
 
   
   <entry>
-    <title type="html"><![CDATA[yaf nginx]]></title>
+    <title type="html"><![CDATA[Yaf框架在nginx虚拟主机中的配置]]></title>
     <link href="http://proudxu.github.com/blog/2013/01/14/yaf-nginx/"/>
     <updated>2013-01-14T20:19:00+08:00</updated>
     <id>http://proudxu.github.com/blog/2013/01/14/yaf-nginx</id>
