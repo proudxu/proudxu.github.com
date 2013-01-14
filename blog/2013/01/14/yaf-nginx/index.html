@@ -175,43 +175,43 @@ server
 <span class='line-number'>41</span>
 </pre></td><td class='code'><pre><code class='lua'><span class='line'><span class="n">server</span>
 </span><span class='line'><span class="p">{</span>
-</span><span class='line'>        <span class="n">listen</span>       <span class="mi">80</span><span class="p">;</span>
-</span><span class='line'>        <span class="n">server_name</span> <span class="n">demo</span><span class="p">.</span><span class="n">yafphp</span><span class="p">.</span><span class="n">com</span><span class="p">;</span>
-</span><span class='line'>        <span class="n">index</span> <span class="n">index</span><span class="p">.</span><span class="n">html</span> <span class="n">index</span><span class="p">.</span><span class="n">htm</span> <span class="n">index</span><span class="p">.</span><span class="n">php</span><span class="p">;</span>
-</span><span class='line'>        <span class="n">root</span>  <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">wwwroot</span><span class="o">/</span><span class="n">demo</span><span class="p">.</span><span class="n">yafphp</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">public</span><span class="o">/</span><span class="p">;</span>
-</span><span class='line'>        <span class="n">error_log</span> <span class="o">/</span><span class="n">data</span><span class="o">/</span><span class="n">order8</span><span class="p">.</span><span class="n">log</span><span class="p">;</span>
+</span><span class='line'>      <span class="n">listen</span>       <span class="mi">80</span><span class="p">;</span>
+</span><span class='line'>      <span class="n">server_name</span> <span class="n">demo</span><span class="p">.</span><span class="n">yafphp</span><span class="p">.</span><span class="n">com</span><span class="p">;</span>
+</span><span class='line'>      <span class="n">index</span> <span class="n">index</span><span class="p">.</span><span class="n">html</span> <span class="n">index</span><span class="p">.</span><span class="n">htm</span> <span class="n">index</span><span class="p">.</span><span class="n">php</span><span class="p">;</span>
+</span><span class='line'>      <span class="n">root</span>  <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">wwwroot</span><span class="o">/</span><span class="n">demo</span><span class="p">.</span><span class="n">yafphp</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">public</span><span class="p">;</span>
+</span><span class='line'>      <span class="n">error_log</span> <span class="o">/</span><span class="n">data</span><span class="o">/</span><span class="n">order8</span><span class="p">.</span><span class="n">log</span><span class="p">;</span>
 </span><span class='line'>
-</span><span class='line'>        <span class="n">location</span> <span class="o">/</span> <span class="p">{</span>
-</span><span class='line'>                 <span class="k">if</span> <span class="p">(</span><span class="err">!</span><span class="o">-</span><span class="n">e</span> <span class="err">$</span><span class="n">request_filename</span><span class="p">){</span>
-</span><span class='line'>                        <span class="n">rewrite</span> <span class="o">^/</span><span class="p">(.</span><span class="o">*</span><span class="p">)</span> <span class="o">/</span><span class="n">index</span><span class="p">.</span><span class="n">php</span><span class="o">/</span><span class="err">$</span><span class="mi">1</span> <span class="n">last</span><span class="p">;</span>
-</span><span class='line'>                        <span class="o">#</span><span class="k">break</span><span class="p">;</span>
-</span><span class='line'>                 <span class="p">}</span>
-</span><span class='line'>        <span class="p">}</span>
+</span><span class='line'>      <span class="n">location</span> <span class="err">~</span> <span class="err">\</span><span class="p">.</span><span class="n">php</span><span class="err">$</span>
+</span><span class='line'>      <span class="p">{</span>
+</span><span class='line'>              <span class="n">fastcgi_pass</span>  <span class="n">unix</span><span class="p">:</span><span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">php</span><span class="o">-</span><span class="n">cgi</span><span class="p">.</span><span class="n">sock</span><span class="p">;</span>
+</span><span class='line'>              <span class="n">fastcgi_index</span> <span class="n">index</span><span class="p">.</span><span class="n">php</span><span class="p">;</span>
+</span><span class='line'>              <span class="n">include</span> <span class="n">fcgi</span><span class="p">.</span><span class="n">conf</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'>              <span class="n">include</span> <span class="n">fastcgi_params</span><span class="p">;</span>
+</span><span class='line'>              <span class="n">fastcgi_param</span> <span class="n">SCRIPT_FILENAME</span> <span class="err">$</span><span class="n">document_root</span><span class="err">$</span><span class="n">fastcgi_script_name</span><span class="p">;</span>
+</span><span class='line'>            <span class="o">#</span> <span class="n">fastcgi_param</span> <span class="n">PATH_INFO</span> <span class="err">$</span><span class="n">fastcgi_script_name</span><span class="p">;</span> <span class="o">#</span> <span class="n">Don</span><span class="s1">&#39;</span><span class="s">t include this line. </span>
+</span><span class='line'>      <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>     <span class="k">if</span> <span class="p">(</span><span class="err">!</span><span class="o">-</span><span class="n">e</span> <span class="err">$</span><span class="n">request_filename</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>             <span class="n">rewrite</span> <span class="o">^/</span><span class="p">(.</span><span class="o">*</span><span class="err">\</span><span class="p">.(</span><span class="n">js</span><span class="err">|</span><span class="n">ico</span><span class="err">|</span><span class="n">gif</span><span class="err">|</span><span class="n">jpg</span><span class="err">|</span><span class="n">png</span><span class="err">|</span><span class="n">css</span><span class="err">|</span><span class="n">bmp</span><span class="err">|</span><span class="n">html</span><span class="err">|</span><span class="n">xls</span><span class="p">)</span><span class="err">$</span><span class="p">)</span> <span class="o">/</span><span class="n">public</span><span class="o">/</span><span class="err">$</span><span class="mi">1</span> <span class="n">last</span><span class="p">;</span>
+</span><span class='line'>             <span class="n">rewrite</span> <span class="o">^/</span><span class="p">(.</span><span class="o">*</span><span class="p">)</span> <span class="o">/</span><span class="n">index</span><span class="p">.</span><span class="n">php</span><span class="err">?$</span><span class="mi">1</span> <span class="n">last</span><span class="p">;</span>
+</span><span class='line'>     <span class="p">}</span>
 </span><span class='line'>
 </span><span class='line'>
-</span><span class='line'>        <span class="n">location</span> <span class="err">~</span> <span class="err">\</span><span class="p">.</span><span class="n">php</span><span class="err">$</span>
-</span><span class='line'>        <span class="p">{</span>
-</span><span class='line'>                <span class="n">fastcgi_pass</span>  <span class="n">unix</span><span class="p">:</span><span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">php</span><span class="o">-</span><span class="n">cgi</span><span class="p">.</span><span class="n">sock</span><span class="p">;</span>
-</span><span class='line'>                <span class="n">fastcgi_index</span> <span class="n">index</span><span class="p">.</span><span class="n">php</span><span class="p">;</span>
-</span><span class='line'>                <span class="n">include</span> <span class="n">fastcgi_params</span><span class="p">;</span>
-</span><span class='line'>                <span class="n">fastcgi_param</span> <span class="n">SCRIPT_FILENAME</span> <span class="err">$</span><span class="n">document_root</span><span class="err">$</span><span class="n">fastcgi_script_name</span><span class="p">;</span>
-</span><span class='line'>                <span class="n">fastcgi_param</span> <span class="n">PATH_INFO</span> <span class="err">$</span><span class="n">fastcgi_script_name</span><span class="p">;</span>
-</span><span class='line'>        <span class="p">}</span>
+</span><span class='line'>      <span class="n">location</span> <span class="o">/</span><span class="n">status</span> <span class="p">{</span>
+</span><span class='line'>              <span class="n">stub_status</span> <span class="n">on</span><span class="p">;</span>
+</span><span class='line'>              <span class="n">access_log</span>   <span class="n">off</span><span class="p">;</span>
+</span><span class='line'>      <span class="p">}</span>
 </span><span class='line'>
-</span><span class='line'>        <span class="n">location</span> <span class="o">/</span><span class="n">status</span> <span class="p">{</span>
-</span><span class='line'>                <span class="n">stub_status</span> <span class="n">on</span><span class="p">;</span>
-</span><span class='line'>                <span class="n">access_log</span>   <span class="n">off</span><span class="p">;</span>
-</span><span class='line'>        <span class="p">}</span>
+</span><span class='line'>      <span class="n">location</span> <span class="err">~</span> <span class="p">.</span><span class="o">*</span><span class="err">\</span><span class="p">.(</span><span class="n">gif</span><span class="err">|</span><span class="n">jpg</span><span class="err">|</span><span class="n">jpeg</span><span class="err">|</span><span class="n">png</span><span class="err">|</span><span class="n">bmp</span><span class="err">|</span><span class="n">swf</span><span class="p">)</span><span class="err">$</span>
+</span><span class='line'>              <span class="p">{</span>
+</span><span class='line'>                      <span class="n">expires</span>      <span class="mi">30</span><span class="n">d</span><span class="p">;</span>
+</span><span class='line'>              <span class="p">}</span>
 </span><span class='line'>
-</span><span class='line'>        <span class="n">location</span> <span class="err">~</span> <span class="p">.</span><span class="o">*</span><span class="err">\</span><span class="p">.(</span><span class="n">gif</span><span class="err">|</span><span class="n">jpg</span><span class="err">|</span><span class="n">jpeg</span><span class="err">|</span><span class="n">png</span><span class="err">|</span><span class="n">bmp</span><span class="err">|</span><span class="n">swf</span><span class="p">)</span><span class="err">$</span>
-</span><span class='line'>                <span class="p">{</span>
-</span><span class='line'>                        <span class="n">expires</span>      <span class="mi">30</span><span class="n">d</span><span class="p">;</span>
-</span><span class='line'>                <span class="p">}</span>
-</span><span class='line'>
-</span><span class='line'>        <span class="n">location</span> <span class="err">~</span> <span class="p">.</span><span class="o">*</span><span class="err">\</span><span class="p">.(</span><span class="n">js</span><span class="err">|</span><span class="n">css</span><span class="p">)</span><span class="err">?$</span>
-</span><span class='line'>                <span class="p">{</span>
-</span><span class='line'>                        <span class="n">expires</span>      <span class="mi">12</span><span class="n">h</span><span class="p">;</span>
-</span><span class='line'>                <span class="p">}</span>
+</span><span class='line'>      <span class="n">location</span> <span class="err">~</span> <span class="p">.</span><span class="o">*</span><span class="err">\</span><span class="p">.(</span><span class="n">js</span><span class="err">|</span><span class="n">css</span><span class="p">)</span><span class="err">?$</span>
+</span><span class='line'>              <span class="p">{</span>
+</span><span class='line'>                      <span class="n">expires</span>      <span class="mi">12</span><span class="n">h</span><span class="p">;</span>
+</span><span class='line'>              <span class="p">}</span>
 </span><span class='line'>
 </span><span class='line'><span class="p">}</span>
 </span></code></pre></td></tr></table></div></figure>
