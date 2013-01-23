@@ -9,7 +9,7 @@
   <meta name="author" content="Zhao, Xuhai">
 
   
-  <meta name="description" content="Yaf框架在nginx虚拟主机中的配置1
+  <meta name="description" content="主要是配置一下rewrite规则，重写URL。另外，fastcgi_param PATH_INFO这个不能有，要不然rewrite不能生效&#8230; Yaf框架在nginx虚拟主机中的配置1
 2
 3
 4
@@ -29,29 +29,7 @@
 18
 19
 20
-21
-22
-23
-24
-25
-26
-27
-28
-29
-30
-31
-32
-33
-34
-35
-36
-37
-38
-39
-40
-41
-server
-{ listen &hellip;">
+21 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -132,7 +110,9 @@ server
   </header>
 
 
-<div class="entry-content"><figure class='code'><figcaption><span>Yaf框架在nginx虚拟主机中的配置</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<div class="entry-content"><p>主要是配置一下rewrite规则，重写URL。另外，<code>fastcgi_param PATH_INFO</code>这个不能有，要不然rewrite不能生效&#8230;</p>
+
+<figure class='code'><figcaption><span>Yaf框架在nginx虚拟主机中的配置</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>

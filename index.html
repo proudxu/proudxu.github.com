@@ -254,7 +254,9 @@ make install
   </header>
 
 
-  <div class="entry-content"><figure class='code'><figcaption><span>Yaf框架在nginx虚拟主机中的配置</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+  <div class="entry-content"><p>主要是配置一下rewrite规则，重写URL。另外，<code>fastcgi_param PATH_INFO</code>这个不能有，要不然rewrite不能生效&#8230;</p>
+
+<figure class='code'><figcaption><span>Yaf框架在nginx虚拟主机中的配置</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>

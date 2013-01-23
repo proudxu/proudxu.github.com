@@ -4,7 +4,7 @@
   <title><![CDATA[Tag: nginx | 心静茹水]]></title>
   <link href="http://proudxu.github.com/tags/nginx/atom.xml" rel="self"/>
   <link href="http://proudxu.github.com/"/>
-  <updated>2013-01-23T21:00:23+08:00</updated>
+  <updated>2013-01-23T21:07:01+08:00</updated>
   <id>http://proudxu.github.com/</id>
   <author>
     <name><![CDATA[Zhao, Xuhai]]></name>
@@ -18,7 +18,8 @@
     <link href="http://proudxu.github.com/blog/2013/01/14/yaf-nginx/"/>
     <updated>2013-01-14T20:19:00+08:00</updated>
     <id>http://proudxu.github.com/blog/2013/01/14/yaf-nginx</id>
-    <content type="html"><![CDATA[<p>``` nginx Yaf框架在nginx虚拟主机中的配置
+    <content type="html"><![CDATA[<p>主要是配置一下rewrite规则，重写URL。另外，<code>fastcgi_param PATH_INFO</code>这个不能有，要不然rewrite不能生效...  <br/>
+``` nginx Yaf框架在nginx虚拟主机中的配置
 server
 {</p>
 
