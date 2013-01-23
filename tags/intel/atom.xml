@@ -4,7 +4,7 @@
   <title><![CDATA[Tag: intel | 心静茹水]]></title>
   <link href="http://proudxu.github.com/tags/intel/atom.xml" rel="self"/>
   <link href="http://proudxu.github.com/"/>
-  <updated>2013-01-23T21:17:19+08:00</updated>
+  <updated>2013-01-23T21:36:50+08:00</updated>
   <id>http://proudxu.github.com/</id>
   <author>
     <name><![CDATA[Zhao, Xuhai]]></name>
@@ -20,7 +20,7 @@
     <id>http://proudxu.github.com/blog/2012/09/03/work-in-intel</id>
     <content type="html"><![CDATA[<p>好费劲啊，octopress博客终于整好了。<br></p>
 
-<h2>我会慢慢的从网易博客<em><a href="http://blog.163.com/lovejingru@yeah/">永远的海哥</a></em>迁移到这里。</h2>
+<h2>我会慢慢的从网易博客<a href="http://blog.163.com/lovejingru@yeah/">永远的海哥</a>迁移到这里。</h2>
 
 <p>问题总结如下：</p>
 
@@ -35,7 +35,7 @@ public key问题： 按照github-&gt;admin-&gt;ssh key中的说明就可以了�
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[first note]]></title>
+    <title type="html"><![CDATA[Intern in Intel]]></title>
     <link href="http://proudxu.github.com/blog/2012/09/02/first-note/"/>
     <updated>2012-09-02T22:08:00+08:00</updated>
     <id>http://proudxu.github.com/blog/2012/09/02/first-note</id>
