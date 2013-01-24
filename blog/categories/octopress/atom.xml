@@ -4,7 +4,7 @@
   <title><![CDATA[Category: octopress | 心静茹水]]></title>
   <link href="http://proudxu.github.com/blog/categories/octopress/atom.xml" rel="self"/>
   <link href="http://proudxu.github.com/"/>
-  <updated>2013-01-24T09:50:09+08:00</updated>
+  <updated>2013-01-24T09:51:04+08:00</updated>
   <id>http://proudxu.github.com/</id>
   <author>
     <name><![CDATA[Zhao, Xuhai]]></name>
@@ -151,11 +151,9 @@ disqus_show_comment_count: true</code></pre>
     <link href="http://proudxu.github.com/blog/2012/09/03/work-in-intel/"/>
     <updated>2012-09-03T09:50:00+08:00</updated>
     <id>http://proudxu.github.com/blog/2012/09/03/work-in-intel</id>
-    <content type="html"><![CDATA[<p>好费劲啊，octopress博客终于整好了。<br></p>
-
-<h2>我会慢慢的从网易博客<a href="http://blog.163.com/lovejingru@yeah/">永远的海哥</a>迁移到这里。</h2>
-
-<p>问题总结如下：</p>
+    <content type="html"><![CDATA[<p>好费劲啊，octopress博客终于整好了。<br>
+我会慢慢的从网易博客<a href="http://blog.163.com/lovejingru@yeah/">永远的海哥</a>迁移到这里。  <br/>
+问题总结如下：</p>
 
 <pre><code>ssh的时候提示22 **bad file number**   
 主要原因是公司的网络问题，可能因为代理或者设置了防火墙的原因，换成外网就没问题了；   
