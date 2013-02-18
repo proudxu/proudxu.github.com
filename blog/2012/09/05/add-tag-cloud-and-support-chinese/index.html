@@ -1,79 +1,87 @@
 
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
-	<meta charset="utf-8">
-	<title>Octopress添加tag cloud且支持中文 - 心静茹水</title>
-	<meta name="author" content="Zhao, Xuhai">
+  <meta charset="utf-8">
+  <title>Octopress添加tag cloud且支持中文 - 心静茹水</title>
+  <meta name="author" content="Zhao, Xuhai">
 
-	
-	<meta name="description" content="今天上班又不务正业了，主要是昨天晚上就完成了老板最近布置的修改JIRA插件，添加敏感关键字检测及提供修改功能的任务，上午给老板演示了一下，在他提出的各种极端情况下插件都能很好的工作，老板让我今天在界面上加些交互信息，使交互更加友好。 整个白天都在折腾我的Octopress博客，这个果然很需要耐心， &hellip;">
-	
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <meta name="description" content="今天上班又不务正业了，主要是昨天晚上就完成了老板最近布置的修改JIRA插件，添加敏感关键字检测及提供修改功能的任务，上午给老板演示了一下，在他提出的各种极端情况下插件都能很好的工作，老板让我今天在界面上加些交互信息，使交互更加友好。 整个白天都在折腾我的Octopress博客，这个果然很需要耐心， &hellip;">
+  
 
-	<link href="/atom.xml" rel="alternate" title="心静茹水" type="application/atom+xml">
-	<link rel="canonical" href="">
-	<link href="/favicon.png" rel="shortcut icon">
-	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
-	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-	
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://proudxu.github.com/blog/2012/09/05/add-tag-cloud-and-support-chinese/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="心静茹水" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-34658066-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
 </head>
 
 <body>
-	<header id="header" class="inner"><h1><a href="/">心静茹水</a></h1>
-<nav id="main-nav"><ul class="main">
-	<li><a href="/">Blog</a></li>
-	<li><a href="/blog/archives">Archives</a></li>
-</ul>
-</nav>
-<nav id="mobile-nav">
-	<div class="alignleft menu">
-		<a class="button">Menu</a>
-		<div class="container"><ul class="main">
-	<li><a href="/">Blog</a></li>
-	<li><a href="/blog/archives">Archives</a></li>
-</ul>
-</div>
-	</div>
-	<div class="alignright search">
-		<a class="button"></a>
-		<div class="container">
-			<form action="http://google.com/search" method="get">
-				<input type="text" name="q" results="0">
-				<input type="hidden" name="q" value="site:proudxu.github.com">
-			</form>
-		</div>
-	</div>
-</nav>
-<nav id="sub-nav" class="alignright">
-	<div class="social">
-		
-		
-		
-		
-    
-		
-		
-		
-		
-		
-		<a class="rss" href="/atom.xml" title="RSS">RSS</a>
-		
-	</div>
-	<form class="search" action="http://google.com/search" method="get">
-		<input class="alignright" type="text" name="q" results="0">
-		<input type="hidden" name="q" value="site:proudxu.github.com">
-	</form>
-</nav>
-
-</header>
+	<header id="header" class="inner"><hgroup>
+  <h1><a href="/">心静茹水</a></h1>
+  
+    <h2>to be continue..</h2>
+  
+</hgroup></header>
 	
 		
 	
 	<div id="content" class="inner"><article class="post">
-	<h2 class="title">Octopress添加tag Cloud且支持中文</h2>
-	<div class="entry-content"><p>今天上班又不务正业了，主要是昨天晚上就完成了老板最近布置的修改JIRA插件，添加敏感关键字检测及提供修改功能的任务，上午给老板演示了一下，在他提出的各种极端情况下插件都能很好的工作，老板让我今天在界面上加些交互信息，使交互更加友好。 <br/>
+  <header>
+    
+      <h1 class="entry-title">Octopress添加tag Cloud且支持中文</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-09-05T19:06:00+08:00" pubdate data-updated="true">Sep 5<span>th</span>, 2012</time>
+        
+         | <a href="#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>今天上班又不务正业了，主要是昨天晚上就完成了老板最近布置的修改JIRA插件，添加敏感关键字检测及提供修改功能的任务，上午给老板演示了一下，在他提出的各种极端情况下插件都能很好的工作，老板让我今天在界面上加些交互信息，使交互更加友好。 <br/>
 整个白天都在折腾我的Octopress博客，这个果然很需要耐心，还好我最近已经被java的各种bug折磨的宠辱不惊了。今天主要添加了tag功能。正如<a href="http://log4d.com/2012/05/tag-cloud/">Log4D</a>所说的那样，一篇文章只能输入一个category，但可以有多个tag，我很同意这个观点。我这里也是用了他所用的两个插件<a href="https://github.com/robbyedwards/octopress-tag-pages">robbyedwards/octopress-tag-pages</a>和<a href="https://github.com/robbyedwards/octopress-tag-cloud">robbyedwards/octopress-tag-cloud</a>,不过跟他不同的是，我只用了官方网站上提供的两个插件，因为我觉得category还是排列整齐点的好，毕竟一个博客的category不会很多，没有必要弄成tag那种有大有小的样式，所以category我还沿用了Octopress官方的样式。这两个插件安装起来不太难，不过有些细节需要注意的。  <br/>
 第一个插件的功能是使文章支持<code>tag</code>，第二个是集中显示<code>tag cloud</code>。</p>
 
@@ -109,43 +117,14 @@
 思路可能有点乱，这是我凭借记忆写出来的，有可能有些出入，如果有什么不明白的，可以评论，我会及时回复的。</p>
 </div>
 
+</article>
 
-<div class="meta">
-	<div class="date">
-
-
-
-
-
-
-
-
+	<div class="sharing">
   
-
-
-<time datetime="2012-09-05T19:06:00+08:00" pubdate data-updated="true">Sep 5<span>th</span>, 2012</time></div>
-	<div class="tags">
-
-
-	<a class='category' href='/blog/categories/octopress/'>octopress</a>
-
-
-</div>
-	
-		<div class="comments"><a href="/blog/2012/09/05/add-tag-cloud-and-support-chinese/#disqus_thread">Comments</a></div>
-	
-</div></article>
-
-	<div class="share">
-	<div class="addthis_toolbox addthis_default_style ">
-	
-	
-	<a class="addthis_button_tweet"></a>
-	
-	
-	<a class="addthis_counter addthis_pill_style"></a>
-	</div>
-  <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid="></script>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://proudxu.github.com/blog/2012/09/05/add-tag-cloud-and-support-chinese/" data-via="" data-counturl="http://proudxu.github.com/blog/2012/09/05/add-tag-cloud-and-support-chinese/" >Tweet</a>
+  
+  
+  
 </div>
 
 
@@ -156,19 +135,13 @@
 </div>
 </section>
 </div>
-	<footer id="footer" class="inner">Copyright &copy; 2013
-
-    Zhao, Xuhai
+	<footer id="footer" class="inner"><p>
+  Copyright &copy; 2013 - Zhao, Xuhai -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
 
 </footer>
-	<script src="/javascripts/slash.js"></script>
-<script src="/javascripts/jquery.fancybox.pack.js"></script>
-<script type="text/javascript">
-(function($){
-	$('.fancybox').fancybox();
-})(jQuery);
-</script> <!-- Delete or comment this line to disable Fancybox -->
-
+	
 
 <script type="text/javascript">
       var disqus_shortname = 'proudxu';
@@ -188,17 +161,21 @@
 
 
 
-	<script type="text/javascript">
-		var _gaq = _gaq || [];
-		_gaq.push(['_setAccount', 'UA-34658066-1']);
-		_gaq.push(['_trackPageview']);
 
-		(function() {
-			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-		})();
-	</script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
 
 
 

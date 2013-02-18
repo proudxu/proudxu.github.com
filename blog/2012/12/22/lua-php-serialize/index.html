@@ -1,83 +1,91 @@
 
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
-	<meta charset="utf-8">
-	<title>Lua中实现php序列化及反序列化函数 - 心静茹水</title>
-	<meta name="author" content="Zhao, Xuhai">
+  <meta charset="utf-8">
+  <title>Lua中实现php序列化及反序列化函数 - 心静茹水</title>
+  <meta name="author" content="Zhao, Xuhai">
 
-	
-	<meta name="description" content="好高兴啊，昨天翻遍了lua自带的库，又在网上找了一天如何在lua中序列化以及反序列化，但结果都不是我要的，因为我要在lua中反序列化由php序列化函数序列化的一个字符串，比如这样的： 1
+  
+  <meta name="description" content="好高兴啊，昨天翻遍了lua自带的库，又在网上找了一天如何在lua中序列化以及反序列化，但结果都不是我要的，因为我要在lua中反序列化由php序列化函数序列化的一个字符串，比如这样的： 1
 2
 3
 4
 a:9:{s:10:"comment_id";s:1:"1";s:7:"user_id";s:7 &hellip;">
-	
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
 
-	<link href="/atom.xml" rel="alternate" title="心静茹水" type="application/atom+xml">
-	<link rel="canonical" href="">
-	<link href="/favicon.png" rel="shortcut icon">
-	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
-	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-	
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://proudxu.github.com/blog/2012/12/22/lua-php-serialize/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="心静茹水" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-34658066-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
 </head>
 
 <body>
-	<header id="header" class="inner"><h1><a href="/">心静茹水</a></h1>
-<nav id="main-nav"><ul class="main">
-	<li><a href="/">Blog</a></li>
-	<li><a href="/blog/archives">Archives</a></li>
-</ul>
-</nav>
-<nav id="mobile-nav">
-	<div class="alignleft menu">
-		<a class="button">Menu</a>
-		<div class="container"><ul class="main">
-	<li><a href="/">Blog</a></li>
-	<li><a href="/blog/archives">Archives</a></li>
-</ul>
-</div>
-	</div>
-	<div class="alignright search">
-		<a class="button"></a>
-		<div class="container">
-			<form action="http://google.com/search" method="get">
-				<input type="text" name="q" results="0">
-				<input type="hidden" name="q" value="site:proudxu.github.com">
-			</form>
-		</div>
-	</div>
-</nav>
-<nav id="sub-nav" class="alignright">
-	<div class="social">
-		
-		
-		
-		
-    
-		
-		
-		
-		
-		
-		<a class="rss" href="/atom.xml" title="RSS">RSS</a>
-		
-	</div>
-	<form class="search" action="http://google.com/search" method="get">
-		<input class="alignright" type="text" name="q" results="0">
-		<input type="hidden" name="q" value="site:proudxu.github.com">
-	</form>
-</nav>
-
-</header>
+	<header id="header" class="inner"><hgroup>
+  <h1><a href="/">心静茹水</a></h1>
+  
+    <h2>to be continue..</h2>
+  
+</hgroup></header>
 	
 		
 	
 	<div id="content" class="inner"><article class="post">
-	<h2 class="title">Lua中实现php序列化及反序列化函数</h2>
-	<div class="entry-content"><p>好高兴啊，昨天翻遍了lua自带的库，又在网上找了一天如何在lua中序列化以及反序列化，但结果都不是我要的，因为我要在lua中反序列化由php序列化函数序列化的一个字符串，比如这样的：</p>
+  <header>
+    
+      <h1 class="entry-title">Lua中实现php序列化及反序列化函数</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-12-22T15:07:00+08:00" pubdate data-updated="true">Dec 22<span>nd</span>, 2012</time>
+        
+         | <a href="#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>好高兴啊，昨天翻遍了lua自带的库，又在网上找了一天如何在lua中序列化以及反序列化，但结果都不是我要的，因为我要在lua中反序列化由php序列化函数序列化的一个字符串，比如这样的：</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -625,43 +633,14 @@ a:9:{s:10:"comment_id";s:1:"1";s:7:"user_id";s:7 &hellip;">
 <p>之后还遇到一个问题，我的序列化的数据是从redis中通过lrange方法读出来的，我问了老板，读进去的时候已经被php序列化了，但读出来的我认为是序列化的数据用lua中的type函数检测后发现是table类型的。。。这样就不能直接套用unserialize方法进行反序列化了。之后我用lua中便利数组的方法 for key, value in pairs(lists) do print(key .. value) end ,发现序列化的值在value当中，这样就好办了，直接把value反序列化就可以了。好辛苦。。。。</p>
 </div>
 
+</article>
 
-<div class="meta">
-	<div class="date">
-
-
-
-
-
-
-
-
+	<div class="sharing">
   
-
-
-<time datetime="2012-12-22T15:07:00+08:00" pubdate data-updated="true">Dec 22<span>nd</span>, 2012</time></div>
-	<div class="tags">
-
-
-	<a class='category' href='/blog/categories/lua/'>Lua</a>
-
-
-</div>
-	
-		<div class="comments"><a href="/blog/2012/12/22/lua-php-serialize/#disqus_thread">Comments</a></div>
-	
-</div></article>
-
-	<div class="share">
-	<div class="addthis_toolbox addthis_default_style ">
-	
-	
-	<a class="addthis_button_tweet"></a>
-	
-	
-	<a class="addthis_counter addthis_pill_style"></a>
-	</div>
-  <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid="></script>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://proudxu.github.com/blog/2012/12/22/lua-php-serialize/" data-via="" data-counturl="http://proudxu.github.com/blog/2012/12/22/lua-php-serialize/" >Tweet</a>
+  
+  
+  
 </div>
 
 
@@ -672,19 +651,13 @@ a:9:{s:10:"comment_id";s:1:"1";s:7:"user_id";s:7 &hellip;">
 </div>
 </section>
 </div>
-	<footer id="footer" class="inner">Copyright &copy; 2013
-
-    Zhao, Xuhai
+	<footer id="footer" class="inner"><p>
+  Copyright &copy; 2013 - Zhao, Xuhai -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
 
 </footer>
-	<script src="/javascripts/slash.js"></script>
-<script src="/javascripts/jquery.fancybox.pack.js"></script>
-<script type="text/javascript">
-(function($){
-	$('.fancybox').fancybox();
-})(jQuery);
-</script> <!-- Delete or comment this line to disable Fancybox -->
-
+	
 
 <script type="text/javascript">
       var disqus_shortname = 'proudxu';
@@ -704,17 +677,21 @@ a:9:{s:10:"comment_id";s:1:"1";s:7:"user_id";s:7 &hellip;">
 
 
 
-	<script type="text/javascript">
-		var _gaq = _gaq || [];
-		_gaq.push(['_setAccount', 'UA-34658066-1']);
-		_gaq.push(['_trackPageview']);
 
-		(function() {
-			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-		})();
-	</script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
 
 
 
