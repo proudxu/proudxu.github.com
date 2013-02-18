@@ -4,7 +4,7 @@
   <title><![CDATA[Tag: octopress | 心静茹水]]></title>
   <link href="http://proudxu.github.com/tags/octopress/atom.xml" rel="self"/>
   <link href="http://proudxu.github.com/"/>
-  <updated>2013-02-18T21:11:59+08:00</updated>
+  <updated>2013-02-18T21:17:18+08:00</updated>
   <id>http://proudxu.github.com/</id>
   <author>
     <name><![CDATA[Zhao, Xuhai]]></name>
@@ -53,7 +53,7 @@
 <strong>关于使category，和tag支持中文</strong>，由于我没有用Log4D修改之后的插件，所以出现了category和tag不支持中文的情况，这个的修改参考了<a href="http://pfmiles.github.com/blog/liquid-error-about-regexp-match-when-using-octopress-tagcloud/">pf_miles</a>的日志，说的挺好的，不过对于像我这样两个tag插件都用官方原版的来说，就不能直接复制里面的代码了，否则会出现tag和category相混淆的情况。但他的思想还是可以学的嘛，提炼出来，就是把<code>plugins</code>目录下的<code>tag_cloud.rb</code>、<code>tag_generator.rb</code>、<code>catetory_generator.rb</code>这几个文件的#正则表达式#部分都加上\u，就可以了。  <br/>
 思路可能有点乱，这是我凭借记忆写出来的，有可能有些出入，如果有什么不明白的，可以评论，我会及时回复的。</p>
 ]]></content>
-  </entry>aaaaa
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Blogging Like a Hacker]]></title>
@@ -99,7 +99,7 @@
 
 <p>I've been living with Jekyll for just over a month now. I love it. Driving the development of Jekyll based on the needs of my blog has been very rewarding. I can edit my posts in TextMate, giving me automatic and competent spell checking. I have immediate and first class access to the CSS and page templates. Everything is backed up on GitHub. I feel a lightness now when I'm writing a post. The system is simple enough that I can keep the entire conversion process in my head. The distance from my brain to my blog has shrunk, and, in the end, I think that will make me a better author.</p>
 ]]></content>
-  </entry>aaaaa
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[新的Blog]]></title>
@@ -118,6 +118,6 @@ public key问题： 按照github-&gt;admin-&gt;ssh key中的说明就可以了�
 
 <p><strong>下一步研究下代码插入，高亮和comment问题。</strong></p>
 ]]></content>
-  </entry>aaaaa
+  </entry>
   
 </feed>
