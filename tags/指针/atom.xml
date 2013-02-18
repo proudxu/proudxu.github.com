@@ -4,7 +4,7 @@
   <title><![CDATA[Tag: 指针 | 心静茹水]]></title>
   <link href="http://proudxu.github.com/tags/指针/atom.xml" rel="self"/>
   <link href="http://proudxu.github.com/"/>
-  <updated>2013-02-18T20:48:18+08:00</updated>
+  <updated>2013-02-18T21:11:59+08:00</updated>
   <id>http://proudxu.github.com/</id>
   <author>
     <name><![CDATA[Zhao, Xuhai]]></name>
@@ -47,6 +47,6 @@ h) int (*a[10])(int); // An array of 10 pointers to functions that take an integ
 <p><span style="color:red; font-weight:bold">诀窍：弄清楚* [] ()的优先级</span>   <br/>
 详细解答参考这里：<a href="http://blog.csdn.net/lyl494223339/article/details/7854396">解答</a></p>
 ]]></content>
-  </entry>
+  </entry>aaaaa
   
 </feed>
